@@ -7,6 +7,10 @@
 #### Week 1: First Steps in Python & Testing
 - **Python Skills**: Variables, data types, basic operations
 - **Testing Skills**: Simple assertions, manual verification
+- **Prompting Skills**: Basic queries for syntax help
+  - Writing clear questions about error messages
+  - Requesting simple explanations of concepts
+  - Learning to describe programming problems concisely
 - **AI Assistance**: Using Cursor's Tab completion for syntax help
 - **Code Reading**: Tracing variable values in simple programs
 - **Project**: Create basic text analyzer that counts words and characters
@@ -15,6 +19,10 @@
 #### Week 2: Data Structures for Content
 - **Python Skills**: Lists, dictionaries, sets, tuples
 - **Testing Skills**: Creating test functions, verifying data structures
+- **Prompting Skills**: Requesting help with data structures
+  - Specifying exact data structure needs in prompts
+  - Using precise terminology in requests
+  - Breaking down complex data structure questions
 - **AI Assistance**: Using Cursor Chat to explain unfamiliar concepts
 - **Code Reading**: Understanding data transformations and storage
 - **Project**: Implement storage for multiple text documents and metadata
@@ -23,6 +31,10 @@
 #### Week 3: Control Flow & Logical Operations
 - **Python Skills**: Conditionals, loops, boolean logic
 - **Testing Skills**: Testing conditional logic, multiple scenarios
+- **Prompting Skills**: Getting help with logical implementations
+  - Writing prompts that explain the logical conditions clearly
+  - Providing context about the desired behavior
+  - Using pseudo-code in prompts to clarify intent
 - **AI Assistance**: Getting help with logical implementations via Cmd+K
 - **Code Reading**: Tracing execution paths in programmatic logic
 - **Project**: Build categorization and filtering for stored content
@@ -31,6 +43,10 @@
 #### Week 4: Functions & Modularity
 - **Python Skills**: Function definition, parameters, return values, docstrings
 - **Testing Skills**: Unit testing individual functions, test organization
+- **Prompting Skills**: Function design assistance
+  - Breaking down function requirements into clear specifications
+  - Describing input/output relationships precisely
+  - Providing examples of expected behavior in prompts
 - **AI Assistance**: Generating function implementations with detailed specifications
 - **Code Reading**: Following function call flows and understanding scope
 - **Document Reading**: Using AI to analyze function requirements documents
@@ -42,6 +58,10 @@
 #### Week 5: Introduction to Object-Oriented Programming
 - **Python Skills**: Classes, objects, methods, attributes, encapsulation
 - **Testing Skills**: Testing class behavior, fixture setup
+- **Prompting Skills**: Object-oriented design prompting
+  - Describing entity relationships and behaviors
+  - Requesting specific design patterns
+  - Using UML-like descriptions in prompts
 - **AI Assistance**: Using Composer to design class structures
 - **Code Reading**: Understanding class relationships and interactions
 - **Project**: Convert text analyzer to class-based architecture
@@ -50,6 +70,10 @@
 #### Week 6: Inheritance & Polymorphism
 - **Python Skills**: Class inheritance, method overriding, abstract classes
 - **Testing Skills**: Testing inheritance hierarchies, polymorphic behavior
+- **Prompting Skills**: Class hierarchy design
+  - Describing inheritance relationships clearly
+  - Specifying interface requirements
+  - Using example scenarios to illustrate polymorphic behavior
 - **AI Assistance**: Designing class hierarchies with Composer
 - **Code Reading**: Tracing method resolution through inheritance chains
 - **Document Reading**: Using AI to analyze technical specifications for class design
@@ -59,6 +83,10 @@
 #### Week 7: Code Organization & Packages
 - **Python Skills**: Modules, packages, imports, namespaces
 - **Testing Skills**: Test file organization, testing across modules
+- **Prompting Skills**: Architecture-level prompting
+  - Creating context-rich prompts about project structure
+  - Using filesystem terminology effectively
+  - Describing component relationships and dependencies
 - **AI Assistance**: Using Cursor for codebase navigation and organization
 - **Code Reading**: Understanding import relationships and dependencies
 - **Project**: Restructure application into well-organized packages
@@ -67,6 +95,10 @@
 #### Week 8: Advanced Functions & Decorators
 - **Python Skills**: Higher-order functions, decorators, closures, lambdas
 - **Testing Skills**: Testing decorated functions, parameterized testing
+- **Prompting Skills**: Advanced function pattern requests
+  - Explaining functional requirements precisely
+  - Using functional programming terminology
+  - Describing higher-order operations conceptually
 - **AI Assistance**: Implementing complex function patterns with Cursor
 - **Code Reading**: Understanding functional patterns and execution flow
 - **Document Reading**: Analyzing API documentation to implement integrations
@@ -78,6 +110,10 @@
 #### Week 9: External Libraries & Data Analysis
 - **Python Skills**: Virtual environments, pip, working with external packages
 - **Testing Skills**: Testing with external dependencies, mocking
+- **Prompting Skills**: Integration-focused prompting
+  - Referencing official documentation in prompts
+  - Specifying version constraints and compatibility
+  - Creating context-rich integration requests
 - **AI Assistance**: Getting help with library integration using Agent mode
 - **Code Reading**: Understanding library usage patterns and structures
 - **Project**: Integrate NLP libraries for advanced text analysis
@@ -86,6 +122,10 @@
 #### Week 10: Data Visualization & Reporting
 - **Python Skills**: Data processing, visualization libraries, reporting
 - **Testing Skills**: Testing visual outputs, data transformation verification
+- **Prompting Skills**: Visualization design requests
+  - Describing visual outputs precisely
+  - Specifying data transformation pipelines
+  - Using design terminology in visualization requests
 - **AI Assistance**: Generating visualization code with Cursor
 - **Code Reading**: Understanding data pipeline transformations
 - **Document Reading**: Analyzing requirements for dashboard implementations
@@ -95,6 +135,10 @@
 #### Week 11: Error Handling & Robust Systems
 - **Python Skills**: Exceptions, custom exceptions, debugging, logging
 - **Testing Skills**: Error case testing, negative testing, exception verification
+- **Prompting Skills**: Debugging and error handling prompts
+  - Providing complete error context
+  - Creating minimal reproduction examples
+  - Specifying expected behavior vs. actual results
 - **AI Assistance**: Using Cursor for debugging and error pattern recognition
 - **Code Reading**: Tracing error handling paths and recovery mechanisms
 - **Project**: Implement comprehensive error handling throughout the application
@@ -103,6 +147,10 @@
 #### Week 12: Performance Optimization
 - **Python Skills**: Profiling, algorithm optimization, memory management
 - **Testing Skills**: Performance testing, benchmarking
+- **Prompting Skills**: Optimization requests
+  - Including performance metrics in prompts
+  - Specifying optimization constraints and goals
+  - Referencing algorithmic complexity in requests
 - **AI Assistance**: Getting optimization suggestions with Agent mode
 - **Code Reading**: Identifying bottlenecks and optimization opportunities
 - **Document Reading**: Analyzing performance requirements and specifications
@@ -114,6 +162,10 @@
 #### Week 13: Database Integration
 - **Python Skills**: Database connections, ORM, transactions, migrations
 - **Testing Skills**: Database testing, test fixtures, integration testing
+- **Prompting Skills**: Database design and integration prompts
+  - Using database terminology precisely
+  - Creating schema descriptions in prompts
+  - Specifying data relationship requirements
 - **AI Assistance**: Designing database schemas and queries with Cursor
 - **Code Reading**: Understanding data access patterns and persistence
 - **Project**: Implement database storage for content, users, and analytics
@@ -122,6 +174,10 @@
 #### Week 14: API Development
 - **Python Skills**: Web frameworks, RESTful API design, serialization
 - **Testing Skills**: API testing, contract testing, endpoint verification
+- **Prompting Skills**: API design requests
+  - Using RESTful terminology correctly
+  - Creating endpoint specifications
+  - Describing request/response flows precisely
 - **AI Assistance**: Using Agent mode for implementing API endpoints
 - **Code Reading**: Understanding request/response flows and middleware
 - **Document Reading**: Analyzing API specifications and implementing them accurately
@@ -131,6 +187,10 @@
 #### Week 15: Advanced AI Integration
 - **Python Skills**: Working with ML models, embeddings, inference
 - **Testing Skills**: Testing AI components, stability testing, output validation
+- **Prompting Skills**: AI integration prompts
+  - Using machine learning terminology accurately
+  - Creating model integration specifications
+  - Describing inference pipelines clearly
 - **AI Assistance**: Using full Cursor capabilities for complex implementations
 - **Code Reading**: Understanding AI model integration and processing pipelines
 - **Project**: Implement sophisticated recommendation system with embeddings
@@ -139,6 +199,10 @@
 #### Week 16: Deployment & Professional Practices
 - **Python Skills**: Environment configuration, deployment, monitoring
 - **Testing Skills**: Continuous integration, automated testing, smoke tests
+- **Prompting Skills**: System-level prompting mastery
+  - Creating comprehensive architecture descriptions
+  - Specifying deployment requirements precisely
+  - Using DevOps terminology effectively
 - **AI Assistance**: Using Cursor for deployment configuration and documentation
 - **Code Reading**: Understanding deployment architectures and configurations
 - **Document Reading**: Analyzing production requirements and implementing them
@@ -158,6 +222,12 @@
 - **Week 5-8**: From function testing to complex object verification
 - **Week 9-12**: From unit tests to integration and performance testing
 - **Week 13-16**: From manual testing to continuous integration and deployment
+
+### Prompting Skills Progression
+- **Week 1-4**: From basic help requests to precise function specifications
+- **Week 5-8**: From component-level to architecture-level prompting
+- **Week 9-12**: From single-feature to system integration prompts
+- **Week 13-16**: From implementation assistance to complete system design collaboration
 
 ### AI Assistance Progression
 - **Week 1-4**: From basic Tab completion to guided code generation
@@ -183,4 +253,4 @@
 - **Week 9-12**: "I can build sophisticated applications with integrated components"
 - **Week 13-16**: "I am a production-ready Python developer capable of building professional systems"
 
-By the end of this 16-week journey, you will transform from a complete beginner to a confident, production-ready Python developer capable of building sophisticated, AI-powered applications using professional development practices.
+By the end of this 16-week journey, you will transform from a complete beginner to a confident, production-ready Python developer capable of building sophisticated, AI-powered applications using professional development practices and effectively leveraging AI assistance through advanced prompting techniques.
