@@ -19,45 +19,6 @@
 - Metaclasses
 - Python Package Management
 
-## 📊 Data Analysis & Visualization
-### Core Libraries
-- NumPy
-  - Array Operations
-  - Mathematical Functions
-  - Linear Algebra
-  - Random Number Generation
-
-- Pandas
-  - DataFrame Operations
-  - Data Cleaning
-  - Data Transformation
-  - Time Series Analysis
-
-### Visualization
-- Matplotlib
-  - Basic Plotting
-  - Custom Visualizations
-  - Plot Styling
-  - Interactive Features
-
-- Seaborn
-  - Statistical Plotting
-  - Distribution Plots
-  - Regression Plots
-  - Categorical Plots
-
-### Machine Learning
-- Scikit-learn
-  - Model Training
-  - Model Evaluation
-  - Feature Engineering
-  - Pipeline Creation
-
-- NLTK/spaCy
-  - Text Processing
-  - Tokenization
-  - Named Entity Recognition
-  - Sentiment Analysis
 
 ## 🚀 FastAPI
 ### Basics
@@ -69,11 +30,9 @@
 - Middleware
 
 ### Advanced Features
-- Authentication & Authorization
 - WebSocket Support
 - Background Tasks
 - CORS Configuration
-- Rate Limiting
 - File Uploads
 - OpenAPI/Swagger Integration
 
@@ -99,7 +58,6 @@
 - Caching Strategies
 - Data Structures
 - Pub/Sub
-- Rate Limiting
 - Session Storage
 
 ## 🔒 Security
@@ -220,4 +178,95 @@
 - Multi-region Deployment
 - High Availability
 - Disaster Recovery
+
+## 📊 Data Analysis & Visualization
+### Core Libraries
+- NumPy
+  - Array Operations
+  - Mathematical Functions
+  - Linear Algebra
+  - Random Number Generation
+
+- Pandas
+  - DataFrame Operations
+  - Data Cleaning
+  - Data Transformation
+  - Time Series Analysis
+
+### Visualization
+- Matplotlib
+  - Basic Plotting
+  - Custom Visualizations
+  - Plot Styling
+  - Interactive Features
+
+- Seaborn
+  - Statistical Plotting
+  - Distribution Plots
+  - Regression Plots
+  - Categorical Plots
+
+## 🤖 Machine Learning & AI
+### Traditional ML
+- Scikit-learn
+  - Model Training
+  - Model Evaluation
+  - Feature Engineering
+  - Pipeline Creation
+
+### Deep Learning
+- TensorFlow/PyTorch
+  - Model Architecture
+  - Training Pipeline
+  - GPU Optimization
+  - Model Serving
+
+### NLP Processing
+- NLTK/spaCy
+  - Text Processing
+  - Tokenization
+  - Named Entity Recognition
+- Hugging Face
+  - Transformers Library
+  - Model Fine-tuning
+  - Text Generation
+
+### Generative AI Systems
+- Foundation Models
+  - GPT Integration
+  - BERT Implementation
+  - Vector Embeddings
+  - Prompt Engineering
+
+- Recommendation Systems
+  - Content-Based Filtering
+  - Collaborative Filtering
+  - Hybrid Approaches
+  - Real-time Processing
+
+### Production ML/AI
+- Model Management
+  - Version Control
+  - Model Registry
+  - A/B Testing
+  - Performance Monitoring
+
+- MLOps
+  - Pipeline Automation
+  - Model Deployment
+  - Resource Optimization
+  - System Monitoring
+
+### AI Ethics & Best Practices
+- Development Standards
+  - Context Design
+  - System Prompts
+  - Few-shot Learning
+  - Quality Assurance
+
+- Responsible AI
+  - Bias Detection
+  - Model Fairness
+  - Data Privacy
+  - Ethical Guidelines
 
