@@ -1,23 +1,5 @@
 # Python Foundations: Complete Beginner's Journey
-## A 12-Week Comprehensive Course with Integrated Prompt Engineering and Testing Skills
-
----
-
-## Course Overview
-
-This comprehensive 12-week course guides beginners through Python programming fundamentals while simultaneously developing essential developer skills including code reading, debugging, testing, and AI-assisted programming. The curriculum uniquely integrates prompt engineering and testing skills throughout, preparing students to effectively collaborate with AI coding assistants, write reliable, tested code, and build a solid foundation in Python.
-
-### Learning Outcomes
-By the end of this course, students will be able to:
-- Write, read, and debug Python code with confidence
-- Design appropriate data structures and implement efficient algorithms
-- Create modular, object-oriented programs
-- Effectively collaborate with AI coding assistants through well-crafted prompts
-- Debug code systematically using both traditional and AI-assisted methods
-- Write and run tests to verify code correctness and reliability
-- Use test-driven development principles for building robust applications
-- Build complete, well-tested applications that integrate external libraries
-
+## A 12-Week Comprehensive Course with Integrated Financial Project
 ---
 
 ## Phase 1: Python Basics & Essential Developer Skills (Weeks 1-2)
@@ -44,10 +26,10 @@ By the end of this course, students will be able to:
 - Using print statements strategically
 - Basic IDE debugging interface introduction
 
-#### Project
-Simple calculator with guided debugging practice
-- **Integration Activity**: "AI Debugging Partner" - Write prompts to get help understanding error messages
-- **Deliverable**: Working calculator program + documented prompts used during development
+#### Project Integration: Finance Manager Stage 1
+- Set up basic financial variables (income, expenses)
+- Implement simple calculations (total expenses, remaining budget)
+- Demonstrate immediate effects of changing variable values
 
 #### Assessment
 - Basic Python syntax quiz
@@ -81,10 +63,10 @@ Simple calculator with guided debugging practice
 - Debugging string formatting issues
 - Finding and fixing input/output problems
 
-#### Project
-Text processor with systematic debugging practice
-- **Mini-Workshop**: Crafting prompts for string manipulation tasks
-- **Integration Activity**: Document prompts used for implementing different features
+#### Project Integration: Finance Manager Stage 2
+- Add user input for financial data
+- Implement proper currency formatting
+- Create interactive budget calculator
 
 #### Assessment
 - String manipulation exercises
@@ -120,10 +102,10 @@ Text processor with systematic debugging practice
 - Visualizing list contents during execution
 - Using debugger to inspect list values
 
-#### Project
-Todo list manager with comprehensive testing
-- **Practical Exercise**: Writing prompts for different list operations
-- **Integration Activity**: "Prompt Engineering Log" - Maintain documentation of prompts used, responses received, and improvements made
+#### Project Integration: Finance Manager Stage 3
+- Create lists for transaction tracking
+- Process transactions with loops
+- Display running balances
 
 #### Assessment
 - List manipulation coding challenges
@@ -157,10 +139,10 @@ Todo list manager with comprehensive testing
 - Inspecting nested data structures
 - Using pretty-print for complex structures
 
-#### Project
-Contact management system with nested data validation
-- **Workshop**: Compare AI responses to different data structure prompts
-- **Integration Activity**: Create a "Prompt Strategy" document outlining planned prompts for implementation
+#### Project Integration: Finance Manager Stage 4
+- Use dictionaries for transaction categorization
+- Group financial data by categories
+- Generate spending summaries
 
 #### Assessment
 - Dictionary and set operations quiz
@@ -196,10 +178,10 @@ Contact management system with nested data validation
 - Debugging boolean logic errors
 - Validating condition boundaries
 
-#### Project
-Decision-making application with edge case handling
-- **Exercise**: Craft prompts that describe different logical patterns
-- **Integration Activity**: Create "prompt pairs" - one for implementation and one for testing edge cases
+#### Project Integration: Finance Manager Stage 5
+- Implement budget limits and alerts
+- Add conditional status messages
+- Create budget warnings based on thresholds
 
 #### Assessment
 - Boolean logic and conditional exercises
@@ -233,10 +215,10 @@ Decision-making application with edge case handling
 - Using loop variable watches
 - Stepping through iterations in debugger
 
-#### Project
-Data analysis tool with robust loop implementations
-- **Workshop**: Debug loop issues using carefully crafted prompts
-- **Integration Activity**: Document prompts used for implementing efficient loops
+#### Project Integration: Finance Manager Stage 6
+- Add monthly expense tracking
+- Implement nested loops for financial analysis
+- Compare spending across time periods
 
 #### Assessment
 - Loop implementation challenges
@@ -273,10 +255,10 @@ Data analysis tool with robust loop implementations
 - Analyzing call stacks
 - Isolating function-specific bugs
 
-#### Project
-Utility function library with comprehensive testing
-- **Exercise**: Transform function specifications into effective prompts
-- **Integration Activity**: Create a "prompt library" with templates for different function types
+#### Project Integration: Finance Manager Stage 7
+- Create modular financial functions
+- Implement transaction handling functions
+- Develop category analysis functions
 
 #### Assessment
 - Function implementation exercises
@@ -311,10 +293,10 @@ Utility function library with comprehensive testing
 - Simulating error conditions
 - Post-mortem debugging
 
-#### Project
-Log analyzer with comprehensive error handling
-- **Workshop**: Create prompts for different error scenarios
-- **Integration Activity**: Design prompts specifically for error handling implementations
+#### Project Integration: Finance Manager Stage 8
+- Add file saving/loading for transactions
+- Implement error handling for file operations
+- Create data persistence for the finance manager
 
 #### Assessment
 - File handling and exception exercises
@@ -351,10 +333,10 @@ Log analyzer with comprehensive error handling
 - Tracking attribute changes
 - Using object inspection in debugger
 
-#### Project
-Simple game with class-based architecture
-- **Exercise**: Translate class diagrams into effective prompts
-- **Integration Activity**: Create a "prompt architecture" document showing how prompts will be used for different classes
+#### Project Integration: Finance Manager Stage 9
+- Create Transaction and Budget classes
+- Implement object-oriented financial model
+- Add methods for financial analysis
 
 #### Assessment
 - Object-oriented programming exercises
@@ -389,10 +371,10 @@ Simple game with class-based architecture
 - Using library-specific debugging tools
 - Isolating third-party vs. your code issues
 
-#### Project
-Data visualization application with multiple libraries
-- **Workshop**: Develop prompts for integrating multiple components
-- **Integration Activity**: Include a "prompt strategy" section in the project documentation
+#### Project Integration: Finance Manager Stage 10
+- Add data visualization for spending trends
+- Implement matplotlib for financial charts
+- Create visual reports of budget status
 
 #### Assessment
 - Library usage exercises
@@ -430,10 +412,10 @@ Data visualization application with multiple libraries
 - Assertions and verification
 - Running test suites
 
-#### Project
-Test suite for previous project components
-- **Workshop**: Using AI to generate test cases for existing functions
-- **Integration Activity**: Create comprehensive test suite for utility functions from Week 7
+#### Project Integration: Finance Manager Stage 11
+- Create unit tests for financial logic
+- Test budget calculations and alerts
+- Implement test suite for all components
 
 #### Assessment
 - Unit test implementation exercises
@@ -469,10 +451,14 @@ Test suite for previous project components
 - Writing integration tests
 - Measuring and improving test coverage
 
-#### Project
-Full-stack application with comprehensive testing
-- **Exercise**: Practice TDD workflow with AI assistance
-- **Integration Activity**: Implement both unit and integration tests for final project
+#### Project Integration: Finance Manager Stage 12
+- Complete application with all features
+- Add advanced features like:
+  - Financial forecasting
+  - Investment tracking
+  - Savings goals
+  - Data import/export
+  - Comprehensive reporting
 
 #### Assessment
 - TDD implementation challenge
@@ -484,13 +470,21 @@ Full-stack application with comprehensive testing
 
 ---
 
-## Assessment Frameworks
+## Project Development Progression
+
+### Personal Finance Manager/Budget Tracker Evolution
+1. **Stage 1-2**: Basic calculations and user input
+2. **Stage 3-4**: Lists and dictionaries for transaction tracking
+3. **Stage 5-6**: Conditional alerts and monthly analysis
+4. **Stage 7-8**: Modular functions and file persistence
+5. **Stage 9-10**: OOP design and data visualization
+6. **Stage 11-12**: Complete testing and advanced features
 
 ### Prompt Engineering Assessment Framework
 
 Throughout the course, prompt engineering skills will be evaluated using the following rubric:
 
-### Prompt Quality Rubric
+#### Prompt Quality Rubric
 1. **Clarity** (25%)
    - Specific request definition
    - Technical accuracy of terminology
@@ -515,185 +509,49 @@ Throughout the course, prompt engineering skills will be evaluated using the fol
    - Strategic adjustments
    - Pattern recognition
 
-### Prompt Engineering Deliverables
-1. **Weekly Documentation**: Prompts used in each project with analysis
-2. **Prompt Portfolio**: Collection of effective prompts developed throughout the course
-3. **Reflection Journal**: Analysis of prompt effectiveness and lessons learned
-4. **Final Project**: Comprehensive implementation with prompt engineering strategy
+### Final Deliverable
+By the end of the course, students will have:
+1. A production-ready Personal Finance Manager application
+2. A comprehensive portfolio of effective prompts
+3. A complete test suite demonstrating proper testing practices
+4. Documentation of their learning journey across all skill dimensions
 
 ---
 
-## Prompt Engineering and Testing Templates
-
-### Code Explanation Request Template
-```
-I'm looking at this Python code: [CODE]
-I'm not sure about [SPECIFIC ASPECT].
-Can you explain how [SPECIFIC PART] works?
-What I currently understand is [CURRENT UNDERSTANDING].
-```
-
-### Debugging Assistance Template
-```
-I have a Python program that is supposed to [INTENDED BEHAVIOR]
-But it's currently [ACTUAL BEHAVIOR]
-Here's the code: [CODE]
-Here's the error message (if any): [ERROR]
-I've already tried: [PREVIOUS ATTEMPTS]
-```
-
-### Implementation Request Template
-```
-I need to implement a function that [PURPOSE]
-Inputs: [INPUT PARAMETERS AND TYPES]
-Expected output: [OUTPUT DESCRIPTION AND TYPE]
-Requirements:
-- [REQUIREMENT 1]
-- [REQUIREMENT 2]
-Example usage: [EXAMPLE]
-```
-
-### Data Structure Design Template
-```
-I need to design a data structure for [PURPOSE]
-The information I need to store includes:
-- [DATA ELEMENT 1] (type: [TYPE])
-- [DATA ELEMENT 2] (type: [TYPE])
-I'll need to perform these operations:
-- [OPERATION 1]
-- [OPERATION 2]
-Performance considerations: [CONSIDERATIONS]
-```
-
-### System Design Template
-```
-I need to design a [COMPONENT/SYSTEM] for [PURPOSE]
-It needs to include these components:
-- [COMPONENT 1] which does [FUNCTION]
-- [COMPONENT 2] which does [FUNCTION]
-These components should interact by [INTERACTION PATTERN]
-Additional requirements:
-- [REQUIREMENT 1]
-- [REQUIREMENT 2]
-```
-
-### Unit Test Generation Template
-```
-I need to write unit tests for this function:
-[FUNCTION CODE]
-
-The function is supposed to [EXPECTED BEHAVIOR].
-Input parameters:
-- [PARAM 1]: [DESCRIPTION] (valid values: [EXAMPLES])
-- [PARAM 2]: [DESCRIPTION] (valid values: [EXAMPLES])
-
-Expected output for normal cases:
-- [EXAMPLE INPUT] should return [EXPECTED OUTPUT]
-
-Edge cases to consider:
-- [EDGE CASE 1]
-- [EDGE CASE 2]
-
-Please help me create pytest test cases covering both normal functionality and edge cases.
-```
-
-### Test-Driven Development Template
-```
-I need to implement a function with this signature:
-[FUNCTION SIGNATURE]
-
-Purpose: [WHAT THE FUNCTION SHOULD DO]
-
-Requirements:
-- [REQUIREMENT 1]
-- [REQUIREMENT 2]
-
-Test cases the function should pass:
-1. [INPUT] should return [OUTPUT]
-2. [INPUT] should return [OUTPUT]
-3. If [EDGE CASE], it should [EXPECTED BEHAVIOR]
-
-Please help me first write pytest test cases for these requirements, then implement the function that passes these tests.
-```
-
-### Mock Object Template
-```
-I'm testing a function that depends on [EXTERNAL DEPENDENCY]. 
-Here's my function:
-[FUNCTION CODE]
-
-I need to create a mock for [DEPENDENCY] that:
-- Simulates [BEHAVIOR 1]
-- Responds to [METHOD CALL] with [RESPONSE]
-- Allows me to verify [SPECIFIC INTERACTION]
-
-Please help me create the appropriate mock objects and tests to verify my function without using the real dependency.
-```
-
----
-
-## Course Materials and Resources
+## Learning Resources
 
 ### Required Materials
-- Python 3.9+ installed on student computers
+- Python 3.9+ installed
 - Text editor or IDE (VS Code recommended)
 - Course GitHub repository access
 - AI assistant account (specific platform to be determined)
+- matplotlib and related visualization libraries
 - pytest framework and extensions
 - Coverage.py for test coverage analysis
 
 ### Recommended Resources
-- "Python Crash Course" by Eric Matthes (reference text)
-- "Effective Python" by Brett Slatkin (advanced reference)
+- "Python Crash Course" by Eric Matthes
+- "Effective Python" by Brett Slatkin
 - "Python Testing with pytest" by Brian Okken
-- "Test-Driven Development with Python" by Harry Percival (selected chapters)
+- "Test-Driven Development with Python" by Harry Percival
 - Official Python documentation (python.org)
-- Course-specific prompt engineering and testing handbook (provided digitally)
+- Course-specific prompt engineering and testing handbook
 
 ---
 
-## Course Policies
+## Support and Office Hours
 
-### Assessment Breakdown
-- Weekly Projects: 35%
-- Quizzes and Exercises: 20%
-- Prompt Engineering Portfolio: 15%
-- Testing Implementation: 10%
-- Final Project: 20%
-
-### Attendance and Participation
-- Students are expected to attend all sessions
-- Active participation in workshops and code reviews is essential
-- Missed sessions should be compensated through additional exercises
-
-### Late Submissions
-- Projects submitted within 24 hours after deadline: 10% penalty
-- Projects submitted within 48 hours after deadline: 25% penalty
-- Projects submitted more than 48 hours after deadline: 50% penalty
-- No submissions accepted after 1 week
-
-### Academic Integrity
-- All submitted code must be original or properly attributed
-- AI assistance must be documented as specified in course guidelines
-- Plagiarism will result in course failure
-
----
-
-## Support and Resources
-
-### Office Hours
-- Instructor office hours: [SCHEDULE]
-- Teaching assistant availability: [SCHEDULE]
-
-### Online Support
-- Course forum for questions and discussions
-- Weekly check-in sessions for individual support
+### Instructor Support
+- Scheduled office hours: [TIMES]
+- Code review sessions: [FREQUENCY]
+- Project milestone check-ins: Weekly
 - Prompt engineering review sessions on request
 
-### Additional Resources
-- Python community meetups (virtual participation encouraged)
-- Recommended online practice platforms
-- AI assistant documentation and tutorials
+### Online Resources
+- Course discussion forum
+- Project code repository
+- Video tutorials for each project stage
+- Solution walkthroughs
 
 ---
 
