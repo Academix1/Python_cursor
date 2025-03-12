@@ -1,0 +1,2137 @@
+# Finance Manager Project Evolution: Stage-by-Stage Progression
+
+## Stage 1: Basic Financial Calculator
+- Simple command-line application
+- Hardcoded income and expense variables
+- Basic arithmetic operations (addition, subtraction)
+- Calculates total expenses and remaining budget
+- Output displayed as plain text
+- Example:
+  ```python
+  # Stage 1: Basic Financial Calculator
+  income = 5000
+  rent = 1200
+  groceries = 400
+  utilities = 300
+  entertainment = 200
+  
+  total_expenses = rent + groceries + utilities + entertainment
+  remaining_budget = income - total_expenses
+  
+  print(f"Income: ${income}")
+  print(f"Total Expenses: ${total_expenses}")
+  print(f"Remaining Budget: ${remaining_budget}")
+  ```
+
+## Stage 2: Interactive Budget Calculator
+- User input for income and expenses
+- Proper currency formatting
+- Input validation
+- Multiple expense categories
+- Percentage-based calculations (e.g., savings as % of income)
+- Example:
+  ```python
+  # Stage 2: Interactive Budget Calculator
+  income = float(input("Enter your monthly income: $"))
+  
+  expenses = {}
+  categories = ["Rent", "Groceries", "Utilities", "Transportation", "Entertainment"]
+  
+  for category in categories:
+      amount = float(input(f"Enter {category} expense: $"))
+      expenses[category] = amount
+  
+  total_expenses = sum(expenses.values())
+  remaining_budget = income - total_expenses
+  savings_percentage = (remaining_budget / income) * 100 if income > 0 else 0
+  
+  print("\n----- Monthly Budget Summary -----")
+  print(f"Income: ${income:.2f}")
+  print(f"Total Expenses: ${total_expenses:.2f}")
+  print(f"Remaining Budget: ${remaining_budget:.2f}")
+  print(f"Savings Rate: {savings_percentage:.1f}%")
+  ```
+
+## Stage 3: Transaction Tracking System
+- List-based transaction recording
+- Date tracking for each transaction
+- Running balance calculation
+- Transaction history display
+- Basic filtering by date
+- Example:
+  ```python
+  # Stage 3: Transaction Tracking System
+  import datetime
+  
+  income = float(input("Enter your monthly income: $"))
+  starting_balance = float(input("Enter your starting balance: $"))
+  
+  transactions = []
+  current_balance = starting_balance
+  
+  while True:
+      print("\n1. Add transaction")
+      print("2. View transaction history")
+      print("3. View current balance")
+      print("4. Exit")
+      choice = input("Select an option: ")
+      
+      if choice == "1":
+          date = datetime.datetime.now()
+          description = input("Enter transaction description: ")
+          amount = float(input("Enter amount (negative for expense): $"))
+          
+          transaction = {
+              "date": date,
+              "description": description,
+              "amount": amount
+          }
+          
+          transactions.append(transaction)
+          current_balance += amount
+          print(f"Transaction added. New balance: ${current_balance:.2f}")
+          
+      elif choice == "2":
+          print("\n----- Transaction History -----")
+          for t in transactions:
+              print(f"{t['date'].strftime('%Y-%m-%d %H:%M')} | {t['description']:<20} | ${t['amount']:.2f}")
+      
+      elif choice == "3":
+          print(f"\nCurrent balance: ${current_balance:.2f}")
+          
+      elif choice == "4":
+          break
+  ```
+
+## Stage 4: Category-Based Financial Tracking
+- Dictionary-based expense categorization
+- Category spending summaries
+- Percentage analysis by category
+- Budget allocation by category
+- Comparison against allocated budgets
+- Example:
+  ```python
+  # Stage 4: Category-Based Financial Tracking
+  import datetime
+  
+  # Initialize categories and budget allocations
+  categories = {
+      "Housing": {"budget": 1500, "spent": 0},
+      "Food": {"budget": 600, "spent": 0},
+      "Transportation": {"budget": 400, "spent": 0},
+      "Entertainment": {"budget": 300, "spent": 0},
+      "Utilities": {"budget": 350, "spent": 0},
+      "Other": {"budget": 200, "spent": 0}
+  }
+  
+  transactions = []
+  income = float(input("Enter monthly income: $"))
+  
+  while True:
+      print("\n1. Add expense")
+      print("2. View spending by category")
+      print("3. View transaction history")
+      print("4. Exit")
+      choice = input("Select an option: ")
+      
+      if choice == "1":
+          date = datetime.datetime.now()
+          description = input("Enter description: ")
+          amount = float(input("Enter amount: $"))
+          
+          print("\nCategories:")
+          for i, category in enumerate(categories.keys(), 1):
+              print(f"{i}. {category}")
+          
+          cat_choice = int(input("Select category: ")) - 1
+          category = list(categories.keys())[cat_choice]
+          
+          transaction = {
+              "date": date,
+              "description": description,
+              "amount": amount,
+              "category": category
+          }
+          
+          transactions.append(transaction)
+          categories[category]["spent"] += amount
+          
+      elif choice == "2":
+          total_spent = sum(cat["spent"] for cat in categories.values())
+          print("\n----- Spending by Category -----")
+          for category, data in categories.items():
+              percentage = (data["spent"] / total_spent * 100) if total_spent > 0 else 0
+              budget_usage = (data["spent"] / data["budget"] * 100) if data["budget"] > 0 else 0
+              print(f"{category}: ${data['spent']:.2f} ({percentage:.1f}% of total)")
+              print(f"  Budget: ${data['budget']:.2f} ({budget_usage:.1f}% used)")
+      
+      elif choice == "3":
+          print("\n----- Transaction History -----")
+          for t in transactions:
+              print(f"{t['date'].strftime('%Y-%m-%d')} | {t['category']:<15} | {t['description']:<20} | ${t['amount']:.2f}")
+          
+      elif choice == "4":
+          break
+  ```
+
+## Stage 5: Budget Alerts and Conditional Logic
+- Budget threshold warnings
+- Conditional status messages based on spending
+- Alert system for budget limits
+- Visual indicators for budget status
+- Spending trends identification
+- Example:
+  ```python
+  # Stage 5: Budget Alerts and Conditional Logic
+  
+  # Adding to the previous code
+  def check_budget_status(category, amount):
+      budget = categories[category]["budget"]
+      spent = categories[category]["spent"]
+      percentage_used = (spent / budget) * 100 if budget > 0 else 0
+      
+      if percentage_used >= 100:
+          return f"ALERT: Budget for {category} has been EXCEEDED by ${spent - budget:.2f}!"
+      elif percentage_used >= 90:
+          return f"WARNING: {category} budget is nearly depleted ({percentage_used:.1f}% used)"
+      elif percentage_used >= 75:
+          return f"NOTICE: {category} budget is {percentage_used:.1f}% used"
+      else:
+          return f"{category} spending is within budget limits"
+  
+  # Modified transaction adding logic
+  if choice == "1":
+      # ... existing code ...
+      
+      categories[category]["spent"] += amount
+      status_message = check_budget_status(category, amount)
+      print(status_message)
+      
+      # Additional budget status check
+      total_budget = sum(cat["budget"] for cat in categories.values())
+      total_spent = sum(cat["spent"] for cat in categories.values())
+      overall_percentage = (total_spent / total_budget) * 100 if total_budget > 0 else 0
+      
+      if overall_percentage >= 90:
+          print(f"CRITICAL WARNING: Overall budget is {overall_percentage:.1f}% depleted!")
+      elif overall_percentage >= 75:
+          print(f"CAUTION: Overall budget is {overall_percentage:.1f}% depleted")
+  ```
+
+## Stage 6: Time-Based Analysis
+- Monthly expense tracking with nested loops
+- Historical data comparison
+- Trend analysis across time periods
+- Month-over-month spending changes
+- Visual progress bars for monthly targets
+- Example:
+  ```python
+  # Stage 6: Time-Based Analysis
+  import datetime
+  import calendar
+  
+  # Add monthly tracking to our system
+  monthly_data = {}
+  
+  def get_month_key(date):
+      return f"{date.year}-{date.month:02d}"
+  
+  def update_monthly_data(transaction):
+      month_key = get_month_key(transaction["date"])
+      category = transaction["category"]
+      amount = transaction["amount"]
+      
+      if month_key not in monthly_data:
+          monthly_data[month_key] = {cat: 0 for cat in categories}
+          
+      monthly_data[month_key][category] += amount
+  
+  # When adding transactions, also update monthly data
+  if choice == "1":
+      # ... existing code ...
+      update_monthly_data(transaction)
+  
+  # Add new option for monthly comparison
+  elif choice == "5":
+      print("\n----- Monthly Spending Analysis -----")
+      
+      sorted_months = sorted(monthly_data.keys())
+      if len(sorted_months) < 2:
+          print("Need at least two months of data for comparison")
+      else:
+          for i in range(1, len(sorted_months)):
+              current_month = sorted_months[i]
+              previous_month = sorted_months[i-1]
+              
+              year, month = map(int, current_month.split('-'))
+              month_name = calendar.month_name[month]
+              
+              print(f"\nComparison: {month_name} {year}")
+              print("Category      | This Month  | Last Month  | Change")
+              print("-" * 60)
+              
+              for category in categories:
+                  current = monthly_data[current_month][category]
+                  previous = monthly_data[previous_month][category]
+                  change = current - previous
+                  change_percent = (change / previous * 100) if previous != 0 else 0
+                  
+                  direction = "▲" if change > 0 else "▼" if change < 0 else "◆"
+                  
+                  print(f"{category:<14}| ${current:<10.2f}| ${previous:<10.2f}| {direction} ${abs(change):.2f} ({change_percent:.1f}%)")
+  ```
+
+## Stage 7: Function-Based Modular Design
+- Refactoring into modular functions
+- Function-based transaction processing
+- Specialized financial calculation functions
+- Reusable budget management components
+- Parameter-based analysis functions
+- Example:
+  ```python
+  # Stage 7: Function-Based Modular Design
+  import datetime
+  import calendar
+  
+  def initialize_categories():
+      return {
+          "Housing": {"budget": 1500, "spent": 0},
+          "Food": {"budget": 600, "spent": 0},
+          "Transportation": {"budget": 400, "spent": 0},
+          "Entertainment": {"budget": 300, "spent": 0},
+          "Utilities": {"budget": 350, "spent": 0},
+          "Other": {"budget": 200, "spent": 0}
+      }
+  
+  def create_transaction(description, amount, category, date=None):
+      if date is None:
+          date = datetime.datetime.now()
+          
+      return {
+          "date": date,
+          "description": description,
+          "amount": amount,
+          "category": category
+      }
+  
+  def add_transaction(transactions, categories, monthly_data, transaction):
+      transactions.append(transaction)
+      categories[transaction["category"]]["spent"] += transaction["amount"]
+      update_monthly_data(monthly_data, transaction)
+      return check_budget_status(categories, transaction["category"])
+  
+  def update_monthly_data(monthly_data, transaction):
+      month_key = get_month_key(transaction["date"])
+      category = transaction["category"]
+      amount = transaction["amount"]
+      
+      if month_key not in monthly_data:
+          monthly_data[month_key] = {cat: 0 for cat in categories}
+          
+      monthly_data[month_key][category] += amount
+  
+  def get_month_key(date):
+      return f"{date.year}-{date.month:02d}"
+  
+  def check_budget_status(categories, category):
+      budget = categories[category]["budget"]
+      spent = categories[category]["spent"]
+      percentage_used = (spent / budget) * 100 if budget > 0 else 0
+      
+      if percentage_used >= 100:
+          return f"ALERT: Budget for {category} has been EXCEEDED by ${spent - budget:.2f}!"
+      elif percentage_used >= 90:
+          return f"WARNING: {category} budget is nearly depleted ({percentage_used:.1f}% used)"
+      elif percentage_used >= 75:
+          return f"NOTICE: {category} budget is {percentage_used:.1f}% used"
+      else:
+          return f"{category} spending is within budget limits"
+  
+  def calculate_category_statistics(categories):
+      total_budget = sum(cat["budget"] for cat in categories.values())
+      total_spent = sum(cat["spent"] for cat in categories.values())
+      remaining = total_budget - total_spent
+      percentage_used = (total_spent / total_budget) * 100 if total_budget > 0 else 0
+      
+      return {
+          "total_budget": total_budget,
+          "total_spent": total_spent,
+          "remaining": remaining,
+          "percentage_used": percentage_used
+      }
+  
+  def display_spending_by_category(categories):
+      stats = calculate_category_statistics(categories)
+      
+      print("\n----- Spending by Category -----")
+      for category, data in categories.items():
+          percentage = (data["spent"] / stats["total_spent"] * 100) if stats["total_spent"] > 0 else 0
+          budget_usage = (data["spent"] / data["budget"] * 100) if data["budget"] > 0 else 0
+          print(f"{category}: ${data['spent']:.2f} ({percentage:.1f}% of total)")
+          print(f"  Budget: ${data['budget']:.2f} ({budget_usage:.1f}% used)")
+      
+      print(f"\nTotal Budget: ${stats['total_budget']:.2f}")
+      print(f"Total Spent: ${stats['total_spent']:.2f}")
+      print(f"Remaining: ${stats['remaining']:.2f} ({stats['percentage_used']:.1f}% used)")
+  
+  def compare_monthly_spending(monthly_data):
+      sorted_months = sorted(monthly_data.keys())
+      if len(sorted_months) < 2:
+          print("Need at least two months of data for comparison")
+          return
+          
+      for i in range(1, len(sorted_months)):
+          current_month = sorted_months[i]
+          previous_month = sorted_months[i-1]
+          
+          year, month = map(int, current_month.split('-'))
+          month_name = calendar.month_name[month]
+          
+          print(f"\nComparison: {month_name} {year}")
+          print("Category      | This Month  | Last Month  | Change")
+          print("-" * 60)
+          
+          for category in categories:
+              current = monthly_data[current_month][category]
+              previous = monthly_data[previous_month][category]
+              change = current - previous
+              change_percent = (change / previous * 100) if previous != 0 else 0
+              
+              direction = "▲" if change > 0 else "▼" if change < 0 else "◆"
+              
+              print(f"{category:<14}| ${current:<10.2f}| ${previous:<10.2f}| {direction} ${abs(change):.2f} ({change_percent:.1f}%)")
+  
+  # Main program now uses these functions
+  categories = initialize_categories()
+  transactions = []
+  monthly_data = {}
+  ```
+
+## Stage 8: File Persistence and Error Handling
+- File-based data storage and retrieval
+- Exception handling for file operations
+- Data integrity validation
+- CSV/JSON import and export
+- Backup and recovery mechanisms
+- Example:
+  ```python
+  # Stage 8: File Persistence and Error Handling
+  import json
+  import os
+  import datetime
+  
+  def save_data(filename, data):
+      try:
+          with open(filename, 'w') as file:
+              # Convert datetime objects to strings for JSON serialization
+              if 'transactions' in data:
+                  for transaction in data['transactions']:
+                      if isinstance(transaction['date'], datetime.datetime):
+                          transaction['date'] = transaction['date'].isoformat()
+              
+              json.dump(data, file, indent=2)
+          return True, "Data saved successfully"
+      except Exception as e:
+          return False, f"Error saving data: {str(e)}"
+  
+  def load_data(filename):
+      try:
+          if not os.path.exists(filename):
+              return False, "File does not exist", None
+              
+          with open(filename, 'r') as file:
+              data = json.load(file)
+              
+              # Convert date strings back to datetime objects
+              if 'transactions' in data:
+                  for transaction in data['transactions']:
+                      if isinstance(transaction['date'], str):
+                          transaction['date'] = datetime.datetime.fromisoformat(transaction['date'])
+                          
+              return True, "Data loaded successfully", data
+      except json.JSONDecodeError:
+          return False, "Invalid file format", None
+      except Exception as e:
+          return False, f"Error loading data: {str(e)}", None
+  
+  def export_transactions_to_csv(transactions, filename):
+      try:
+          with open(filename, 'w') as file:
+              file.write("Date,Category,Description,Amount\n")
+              for t in transactions:
+                  date_str = t['date'].strftime('%Y-%m-%d')
+                  file.write(f"{date_str},{t['category']},{t['description']},{t['amount']}\n")
+          return True, "Transactions exported successfully"
+      except Exception as e:
+          return False, f"Error exporting transactions: {str(e)}"
+  
+  def import_transactions_from_csv(filename, categories):
+      transactions = []
+      try:
+          with open(filename, 'r') as file:
+              lines = file.readlines()[1:]  # Skip header
+              for line in lines:
+                  try:
+                      date_str, category, description, amount_str = line.strip().split(',')
+                      date = datetime.datetime.strptime(date_str, '%Y-%m-%d')
+                      amount = float(amount_str)
+                      
+                      if category not in categories:
+                          categories[category] = {"budget": 0, "spent": 0}
+                          
+                      transaction = create_transaction(description, amount, category, date)
+                      transactions.append(transaction)
+                      categories[category]["spent"] += amount
+                  except ValueError as ve:
+                      print(f"Skipping invalid line: {line.strip()} - {str(ve)}")
+                      
+          return True, f"{len(transactions)} transactions imported", transactions
+      except Exception as e:
+          return False, f"Error importing transactions: {str(e)}", []
+  
+  # Add to main menu
+  if choice == "6":
+      filename = input("Enter filename to save data: ")
+      data = {
+          "categories": categories,
+          "transactions": transactions,
+          "monthly_data": monthly_data
+      }
+      success, message = save_data(filename, data)
+      print(message)
+      
+  elif choice == "7":
+      filename = input("Enter filename to load data: ")
+      success, message, data = load_data(filename)
+      print(message)
+      
+      if success:
+          categories = data["categories"]
+          transactions = data["transactions"]
+          monthly_data = data["monthly_data"]
+  ```
+
+## Stage 9: Object-Oriented Financial Model
+- Creation of Transaction and Budget classes
+- Class-based financial calculations
+- Encapsulated financial logic
+- Method-based manipulation
+- Inheritance hierarchies
+- Example:
+  ```python
+  # Stage 9: Object-Oriented Financial Model
+  import datetime
+  import uuid
+  
+  class Transaction:
+      def __init__(self, description, amount, category, date=None, transaction_id=None):
+          self.description = description
+          self.amount = amount
+          self.category = category
+          self.date = date if date else datetime.datetime.now()
+          self.transaction_id = transaction_id if transaction_id else str(uuid.uuid4())
+      
+      def __str__(self):
+          return f"{self.date.strftime('%Y-%m-%d')} | {self.category} | {self.description} | ${self.amount:.2f}"
+          
+      def to_dict(self):
+          return {
+              "transaction_id": self.transaction_id,
+              "date": self.date,
+              "description": self.description,
+              "amount": self.amount,
+              "category": self.category
+          }
+  
+  class Category:
+      def __init__(self, name, budget=0):
+          self.name = name
+          self.budget = budget
+          self.transactions = []
+      
+      def add_transaction(self, transaction):
+          if transaction.category == self.name:
+              self.transactions.append(transaction)
+              
+      def get_spent(self):
+          return sum(t.amount for t in self.transactions)
+          
+      def get_budget_status(self):
+          spent = self.get_spent()
+          if self.budget <= 0:
+              return 0
+          return (spent / self.budget) * 100
+          
+      def __str__(self):
+          spent = self.get_spent()
+          status = self.get_budget_status()
+          return f"{self.name}: ${spent:.2f} / ${self.budget:.2f} ({status:.1f}% used)"
+  
+  class Budget:
+      def __init__(self):
+          self.categories = {}
+          self.transactions = []
+          
+      def add_category(self, name, budget=0):
+          self.categories[name] = Category(name, budget)
+          
+      def add_transaction(self, transaction):
+          self.transactions.append(transaction)
+          
+          if transaction.category not in self.categories:
+              self.add_category(transaction.category)
+              
+          self.categories[transaction.category].add_transaction(transaction)
+          
+      def get_total_budget(self):
+          return sum(category.budget for category in self.categories.values())
+          
+      def get_total_spent(self):
+          return sum(category.get_spent() for category in self.categories.values())
+          
+      def get_remaining_budget(self):
+          return self.get_total_budget() - self.get_total_spent()
+          
+      def get_transactions_by_date_range(self, start_date, end_date):
+          return [t for t in self.transactions 
+                  if start_date <= t.date <= end_date]
+                  
+      def get_monthly_spending(self):
+          monthly_data = {}
+          
+          for transaction in self.transactions:
+              month_key = f"{transaction.date.year}-{transaction.date.month:02d}"
+              
+              if month_key not in monthly_data:
+                  monthly_data[month_key] = {cat: 0 for cat in self.categories}
+                  
+              monthly_data[month_key][transaction.category] += transaction.amount
+              
+          return monthly_data
+  
+  # Main program now uses these classes
+  budget = Budget()
+  
+  # Initialize with some categories
+  budget.add_category("Housing", 1500)
+  budget.add_category("Food", 600)
+  budget.add_category("Transportation", 400)
+  budget.add_category("Entertainment", 300)
+  budget.add_category("Utilities", 350)
+  
+  while True:
+      # Menu using the OOP model
+      if choice == "1":
+          description = input("Enter description: ")
+          amount = float(input("Enter amount: $"))
+          
+          print("\nCategories:")
+          for i, category in enumerate(budget.categories.keys(), 1):
+              print(f"{i}. {category}")
+          
+          cat_choice = int(input("Select category: ")) - 1
+          category = list(budget.categories.keys())[cat_choice]
+          
+          transaction = Transaction(description, amount, category)
+          budget.add_transaction(transaction)
+          
+          # Check budget status
+          status = budget.categories[category].get_budget_status()
+          if status >= 100:
+              print(f"ALERT: Budget for {category} has been EXCEEDED!")
+          elif status >= 90:
+              print(f"WARNING: {category} budget is nearly depleted ({status:.1f}% used)")
+  ```
+
+## Stage 10: Data Visualization
+- Chart generation with matplotlib
+- Visual reports for budget status
+- Spending trend visualizations
+- Category comparisons with graphs
+- Interactive visualizations
+- Example:
+  ```python
+  # Stage 10: Data Visualization
+  import matplotlib.pyplot as plt
+  import numpy as np
+  import calendar
+  from matplotlib.ticker import FuncFormatter
+  
+  class BudgetReporter:
+      def __init__(self, budget):
+          self.budget = budget
+          
+      def format_currency(self, x, pos):
+          return f"${x:.0f}"
+          
+      def plot_category_spending(self):
+          categories = []
+          spent_amounts = []
+          budget_amounts = []
+          
+          for name, category in self.budget.categories.items():
+              categories.append(name)
+              spent_amounts.append(category.get_spent())
+              budget_amounts.append(category.budget)
+              
+          x = np.arange(len(categories))
+          width = 0.35
+          
+          fig, ax = plt.subplots(figsize=(10, 6))
+          spent_bars = ax.bar(x - width/2, spent_amounts, width, label='Spent')
+          budget_bars = ax.bar(x + width/2, budget_amounts, width, label='Budget')
+          
+          ax.set_title('Spending vs Budget by Category')
+          ax.set_xticks(x)
+          ax.set_xticklabels(categories)
+          ax.legend()
+          
+          ax.yaxis.set_major_formatter(FuncFormatter(self.format_currency))
+          
+          plt.tight_layout()
+          plt.savefig('category_spending.png')
+          print("Chart saved as 'category_spending.png'")
+          
+      def plot_monthly_trend(self):
+          monthly_data = self.budget.get_monthly_spending()
+          
+          if len(monthly_data) < 2:
+              print("Need at least two months of data for trend visualization")
+              return
+              
+          months = sorted(monthly_data.keys())
+          month_labels = []
+          
+          # Create labels like "Jan '22"
+          for month_key in months:
+              year, month = map(int, month_key.split('-'))
+              month_labels.append(f"{calendar.month_abbr[month]} '{str(year)[2:]}")
+          
+          # Plot total monthly spending
+          total_spent = [sum(monthly_data[month].values()) for month in months]
+          
+          fig, ax = plt.subplots(figsize=(12, 6))
+          ax.plot(month_labels, total_spent, marker='o', linewidth=2)
+          
+          for i, value in enumerate(total_spent):
+              ax.annotate(f"${value:.0f}", 
+                         (i, value),
+                         textcoords="offset points",
+                         xytext=(0, 10),
+                         ha='center')
+          
+          ax.set_title('Total Monthly Spending Trend')
+          ax.set_xlabel('Month')
+          ax.set_ylabel('Amount Spent')
+          ax.grid(True, linestyle='--', alpha=0.7)
+          
+          ax.yaxis.set_major_formatter(FuncFormatter(self.format_currency))
+          
+          plt.tight_layout()
+          plt.savefig('monthly_trend.png')
+          print("Chart saved as 'monthly_trend.png'")
+          
+      def plot_spending_breakdown_pie(self):
+          categories = []
+          spent_amounts = []
+          
+          for name, category in self.budget.categories.items():
+              spent = category.get_spent()
+              if spent > 0:  # Only include categories with spending
+                  categories.append(name)
+                  spent_amounts.append(spent)
+                  
+          fig, ax = plt.subplots(figsize=(8, 8))
+          ax.pie(spent_amounts, labels=categories, autopct='%1.1f%%', 
+                 startangle=90, shadow=True)
+          ax.axis('equal')  # Equal aspect ratio ensures the pie chart is circular
+          
+          ax.set_title('Spending Breakdown by Category')
+          
+          plt.tight_layout()
+          plt.savefig('spending_breakdown.png')
+          print("Chart saved as 'spending_breakdown.png'")
+  
+  # Add to main menu
+  if choice == "8":
+      reporter = BudgetReporter(budget)
+      
+      print("\n1. Category spending comparison")
+      print("2. Monthly spending trend")
+      print("3. Spending breakdown pie chart")
+      
+      report_choice = input("Select a chart to generate: ")
+      
+      if report_choice == "1":
+          reporter.plot_category_spending()
+      elif report_choice == "2":
+          reporter.plot_monthly_trend()
+      elif report_choice == "3":
+          reporter.plot_spending_breakdown_pie()
+  ```
+
+## Stage 11: Unit Testing Implementation (continued)
+```python
+def test_budget_status(self):
+    category = Category("Entertainment", 200)
+    
+    # No spending yet
+    self.assertEqual(category.get_budget_status(), 0)
+    
+    # Add transaction using 50%
+    category.add_transaction(Transaction("Movie tickets", 100, "Entertainment"))
+    self.assertEqual(category.get_budget_status(), 50)
+    
+    # Add another transaction to exceed budget
+    category.add_transaction(Transaction("Concert", 150, "Entertainment"))
+    self.assertEqual(category.get_budget_status(), 125)
+
+class TestBudget(unittest.TestCase):
+    def setUp(self):
+        self.budget = Budget()
+        self.budget.add_category("Housing", 1500)
+        self.budget.add_category("Food", 600)
+        self.budget.add_category("Transportation", 400)
+        
+    def test_add_transaction(self):
+        transaction = Transaction("Grocery shopping", 85.75, "Food")
+        self.budget.add_transaction(transaction)
+        
+        # Check if transaction was added to the right category
+        self.assertEqual(len(self.budget.transactions), 1)
+        self.assertEqual(len(self.budget.categories["Food"].transactions), 1)
+        self.assertEqual(self.budget.categories["Food"].get_spent(), 85.75)
+        
+    def test_budget_calculations(self):
+        self.budget.add_transaction(Transaction("Rent", 1200, "Housing"))
+        self.budget.add_transaction(Transaction("Grocery shopping", 250, "Food"))
+        self.budget.add_transaction(Transaction("Gas", 40, "Transportation"))
+        
+        # Test budget calculations
+        self.assertEqual(self.budget.get_total_budget(), 2500)
+        self.assertEqual(self.budget.get_total_spent(), 1490)
+        self.assertEqual(self.budget.get_remaining_budget(), 1010)
+        
+    def test_date_range_filtering(self):
+        today = datetime.now()
+        yesterday = today - timedelta(days=1)
+        last_week = today - timedelta(days=7)
+        
+        # Add transactions with different dates
+        self.budget.add_transaction(Transaction("Rent", 1200, "Housing", today))
+        self.budget.add_transaction(Transaction("Lunch", 12.50, "Food", yesterday))
+        self.budget.add_transaction(Transaction("Bus fare", 2.75, "Transportation", last_week))
+        
+        # Test date filtering
+        transactions = self.budget.get_transactions_by_date_range(yesterday, today)
+        self.assertEqual(len(transactions), 2)
+
+# Run the tests
+if __name__ == "__main__":
+    unittest.main()
+```
+
+## Stage 12: Advanced Testing and Core Features
+- Test-driven development
+- Mock objects for testing
+- Integration testing
+- Continuous integration concepts
+- Advanced reporting features
+- Example:
+```python
+# Stage 12: Advanced Testing and Integration
+import unittest
+from unittest import mock
+from datetime import datetime
+from finance_manager import Transaction, Budget, BudgetReporter, FileHandler
+
+class MockFileSystem:
+    def __init__(self):
+        self.files = {}
+        
+    def write_file(self, filename, content):
+        self.files[filename] = content
+        return True
+        
+    def read_file(self, filename):
+        if filename in self.files:
+            return self.files[filename]
+        raise FileNotFoundError(f"File {filename} not found")
+
+class TestFileHandler(unittest.TestCase):
+    def setUp(self):
+        self.mock_fs = MockFileSystem()
+        self.file_handler = FileHandler()
+        # Patch the file system operations
+        self.file_handler._write_to_file = self.mock_fs.write_file
+        self.file_handler._read_from_file = self.mock_fs.read_file
+        
+    def test_save_and_load_budget(self):
+        # Create a budget
+        budget = Budget()
+        budget.add_category("Food", 500)
+        budget.add_transaction(Transaction("Lunch", 15.75, "Food"))
+        
+        # Save budget
+        success = self.file_handler.save_budget("test.json", budget)
+        self.assertTrue(success)
+        self.assertIn("test.json", self.mock_fs.files)
+        
+        # Load budget
+        new_budget = Budget()
+        success = self.file_handler.load_budget("test.json", new_budget)
+        self.assertTrue(success)
+        self.assertEqual(new_budget.get_total_budget(), 500)
+        self.assertEqual(new_budget.get_total_spent(), 15.75)
+        
+    def test_export_to_csv(self):
+        budget = Budget()
+        budget.add_transaction(Transaction("Grocery", 45.50, "Food", datetime(2023, 5, 15)))
+        
+        success = self.file_handler.export_to_csv("test.csv", budget.transactions)
+        self.assertTrue(success)
+        
+        csv_content = self.mock_fs.files["test.csv"]
+        self.assertIn("Food", csv_content)
+        self.assertIn("45.5", csv_content)
+        
+class TestIntegration(unittest.TestCase):
+    def test_full_budget_workflow(self):
+        # Create budget
+        budget = Budget()
+        budget.add_category("Housing", 1000)
+        budget.add_category("Food", 500)
+        
+        # Add transactions
+        budget.add_transaction(Transaction("Rent", 900, "Housing"))
+        budget.add_transaction(Transaction("Groceries", 120, "Food"))
+        budget.add_transaction(Transaction("Dinner", 50, "Food"))
+        
+        # Test budget calculations
+        self.assertEqual(budget.get_total_budget(), 1500)
+        self.assertEqual(budget.get_total_spent(), 1070)
+        self.assertEqual(budget.get_remaining_budget(), 430)
+        
+        # Test category calculations
+        housing = budget.categories["Housing"]
+        self.assertEqual(housing.get_spent(), 900)
+        self.assertEqual(housing.get_budget_status(), 90)
+        
+        food = budget.categories["Food"]
+        self.assertEqual(food.get_spent(), 170)
+        self.assertEqual(food.get_budget_status(), 34)
+        
+        # Add file persistence with mocking
+        with mock.patch('finance_manager.FileHandler.save_budget') as mock_save:
+            mock_save.return_value = True
+            file_handler = FileHandler()
+            result = file_handler.save_budget("budget.json", budget)
+            self.assertTrue(result)
+            mock_save.assert_called_once()
+```
+
+## Stage 13: Memory-Efficient Data Processing with Generators
+- Lazy-loaded transaction history
+- Generator-based data processing
+- Functional programming for calculations
+- Efficient report generation
+- Memory optimization for large datasets
+- Example:
+```python
+# Stage 13: Iterators, Generators, and Functional Programming
+from functools import reduce
+from itertools import groupby
+import operator
+from datetime import datetime
+
+class TransactionIterator:
+    def __init__(self, transactions):
+        self.transactions = transactions
+        self.index = 0
+        
+    def __iter__(self):
+        return self
+        
+    def __next__(self):
+        if self.index < len(self.transactions):
+            transaction = self.transactions[self.index]
+            self.index += 1
+            return transaction
+        raise StopIteration
+
+class BudgetAnalyzer:
+    def __init__(self, budget):
+        self.budget = budget
+        
+    def transaction_generator(self):
+        """Generator that yields transactions one by one"""
+        for transaction in self.budget.transactions:
+            yield transaction
+            
+    def monthly_transaction_generator(self):
+        """Generator that yields transactions grouped by month"""
+        # Sort transactions by date
+        sorted_transactions = sorted(
+            self.budget.transactions, 
+            key=lambda t: (t.date.year, t.date.month)
+        )
+        
+        # Group by month
+        for (year, month), transactions in groupby(
+            sorted_transactions, 
+            key=lambda t: (t.date.year, t.date.month)
+        ):
+            yield f"{year}-{month:02d}", list(transactions)
+            
+    def category_spending_generator(self):
+        """Generator that yields category spending"""
+        for category_name, category in self.budget.categories.items():
+            yield category_name, category.get_spent(), category.budget
+            
+    def compute_trend_analysis(self):
+        """Use functional programming to analyze trends"""
+        # Extract monthly data using generator
+        monthly_data = {}
+        for month_key, transactions in self.monthly_transaction_generator():
+            # Calculate total spending for the month using reduce
+            total = reduce(
+                lambda acc, t: acc + t.amount, 
+                transactions, 
+                0
+            )
+            monthly_data[month_key] = total
+            
+        # Calculate month-over-month changes
+        month_keys = sorted(monthly_data.keys())
+        changes = []
+        
+        for i in range(1, len(month_keys)):
+            current = monthly_data[month_keys[i]]
+            previous = monthly_data[month_keys[i-1]]
+            change_pct = ((current - previous) / previous * 100) if previous != 0 else 0
+            changes.append((month_keys[i], change_pct))
+            
+        return changes
+            
+    def generate_efficiency_report(self):
+        """Generate an efficiency report using lazy evaluation"""
+        print("Generating efficiency report...")
+        
+        # Use generator to process categories
+        for category_name, spent, budget in self.category_spending_generator():
+            efficiency = (1 - (spent / budget)) * 100 if budget > 0 else 0
+            status = ""
+            
+            if efficiency < 0:
+                status = "OVER BUDGET"
+            elif efficiency < 20:
+                status = "CRITICAL"
+            elif efficiency < 40:
+                status = "WARNING"
+            else:
+                status = "GOOD"
+                
+            yield {
+                "category": category_name,
+                "budget": budget,
+                "spent": spent,
+                "efficiency": efficiency,
+                "status": status
+            }
+            
+    def simulate_investment_scenarios(self, amount, years, rate):
+        """Generator for investment scenarios"""
+        current_amount = amount
+        for year in range(1, years + 1):
+            current_amount *= (1 + rate)
+            yield year, current_amount
+
+# Usage in main program
+analyzer = BudgetAnalyzer(budget)
+
+# Process transactions using generators
+print("\n----- Recent Transactions -----")
+transaction_count = 0
+for transaction in analyzer.transaction_generator():
+    print(transaction)
+    transaction_count += 1
+    if transaction_count >= 10:  # Show only 10 most recent
+        break
+
+# Generate efficiency report
+print("\n----- Budget Efficiency Report -----")
+for entry in analyzer.generate_efficiency_report():
+    print(f"{entry['category']}: {entry['efficiency']:.1f}% efficient ({entry['status']})")
+
+# Investment scenario simulation
+savings = budget.get_remaining_budget() * 12  # Annual savings
+print("\n----- Investment Growth Scenarios -----")
+print(f"Starting with annual savings of ${savings:.2f}")
+for year, amount in analyzer.simulate_investment_scenarios(savings, 10, 0.07):
+    print(f"Year {year}: ${amount:.2f}")
+```
+
+## Stage 14: Decorators, Context Managers, and Advanced OOP
+- Transaction validation decorators
+- Context managers for file handling
+- Abstract base classes for financial instruments
+- Advanced OOP features
+- Multiple inheritance for specialized accounts
+- Example:
+```python
+# Stage 14: Decorators, Context Managers, and Advanced OOP
+import abc
+from functools import wraps
+from contextlib import contextmanager
+import time
+import logging
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    filename='finance_manager.log'
+)
+logger = logging.getLogger('finance_manager')
+
+# Decorators for transaction validation and logging
+def validate_transaction(method):
+    @wraps(method)
+    def wrapper(self, transaction, *args, **kwargs):
+        # Validate transaction data
+        if transaction.amount <= 0:
+            raise ValueError("Transaction amount must be positive")
+            
+        if not transaction.description:
+            raise ValueError("Transaction must have a description")
+            
+        if not transaction.category:
+            raise ValueError("Transaction must have a category")
+            
+        # Log the validation
+        logger.info(f"Validated transaction: {transaction.description} (${transaction.amount})")
+        
+        # Call the original method
+        return method(self, transaction, *args, **kwargs)
+    return wrapper
+
+def log_operation(method):
+    @wraps(method)
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = method(*args, **kwargs)
+        elapsed_time = time.time() - start_time
+        
+        logger.info(f"Operation {method.__name__} completed in {elapsed_time:.4f} seconds")
+        return result
+    return wrapper
+
+# Context manager for file operations
+@contextmanager
+def budget_file_manager(filename, mode='r'):
+    try:
+        file = open(filename, mode)
+        logger.info(f"Opened file {filename} in mode {mode}")
+        yield file
+    except Exception as e:
+        logger.error(f"Error with file {filename}: {str(e)}")
+        raise
+    finally:
+        file.close()
+        logger.info(f"Closed file {filename}")
+
+# Abstract base classes for financial instruments
+class FinancialInstrument(abc.ABC):
+    def __init__(self, name, balance=0):
+        self.name = name
+        self.balance = balance
+        self.transactions = []
+        
+    @abc.abstractmethod
+    def add_funds(self, amount, description):
+        """Add funds to the instrument"""
+        pass
+        
+    @abc.abstractmethod
+    def remove_funds(self, amount, description):
+        """Remove funds from the instrument"""
+        pass
+        
+    @abc.abstractmethod
+    def get_balance(self):
+        """Get current balance"""
+        pass
+        
+    def get_transaction_history(self):
+        """Get transaction history - common implementation"""
+        return self.transactions
+
+class Asset:
+    def __init__(self, value=0, growth_rate=0):
+        self.value = value
+        self.growth_rate = growth_rate
+        
+    def project_growth(self, years):
+        """Project asset growth over years"""
+        projected_value = self.value
+        projections = []
+        
+        for year in range(1, years + 1):
+            projected_value *= (1 + self.growth_rate)
+            projections.append((year, projected_value))
+            
+        return projections
+        
+    def set_growth_rate(self, rate):
+        self.growth_rate = rate
+
+# Concrete implementations with multiple inheritance
+class Account(FinancialInstrument):
+    def __init__(self, name, account_type, balance=0):
+        super().__init__(name, balance)
+        self.account_type = account_type
+        
+    @validate_transaction
+    def add_funds(self, amount, description):
+        transaction = Transaction(description, amount, "Income", account=self.name)
+        self.transactions.append(transaction)
+        self.balance += amount
+        return transaction
+        
+    @validate_transaction
+    def remove_funds(self, amount, description):
+        transaction = Transaction(description, -amount, "Expense", account=self.name)
+        self.transactions.append(transaction)
+        self.balance -= amount
+        return transaction
+        
+    def get_balance(self):
+        return self.balance
+        
+    @log_operation
+    def generate_statement(self, start_date, end_date):
+        """Generate account statement for date range"""
+        filtered_transactions = [
+            t for t in self.transactions 
+            if start_date <= t.date <= end_date
+        ]
+        
+        return {
+            "account": self.name,
+            "type": self.account_type,
+            "start_balance": self.balance - sum(t.amount for t in filtered_transactions),
+            "end_balance": self.balance,
+            "transactions": filtered_transactions
+        }
+
+class Investment(FinancialInstrument, Asset):
+    def __init__(self, name, investment_type, value=0, growth_rate=0):
+        FinancialInstrument.__init__(self, name, value)
+        Asset.__init__(self, value, growth_rate)
+        self.investment_type = investment_type
+        
+    @validate_transaction
+    def add_funds(self, amount, description):
+        transaction = Transaction(description, amount, "Investment", account=self.name)
+        self.transactions.append(transaction)
+        self.balance += amount
+        self.value += amount
+        return transaction
+        
+    @validate_transaction
+    def remove_funds(self, amount, description):
+        transaction = Transaction(description, -amount, "Withdrawal", account=self.name)
+        self.transactions.append(transaction)
+        self.balance -= amount
+        self.value -= amount
+        return transaction
+        
+    def get_balance(self):
+        return self.balance
+        
+    @log_operation
+    def calculate_returns(self, years):
+        """Calculate investment returns"""
+        projections = self.project_growth(years)
+        initial_value = self.value
+        final_value = projections[-1][1]
+        total_return = final_value - initial_value
+        return {
+            "initial_value": initial_value,
+            "final_value": final_value,
+            "total_return": total_return,
+            "return_percentage": (total_return / initial_value * 100) if initial_value > 0 else 0,
+            "annual_projections": projections
+        }
+
+# Enhanced Budget class using decorators and new features
+class EnhancedBudget(Budget):
+    @log_operation
+    def add_transaction(self, transaction):
+        super().add_transaction(transaction)
+        
+    def save_to_file(self, filename):
+        with budget_file_manager(filename, 'w') as file:
+            # Save budget data
+            file_handler = FileHandler()
+            file_handler.save_budget_to_file(file, self)
+            return True
+            
+    def load_from_file(self, filename):
+        with budget_file_manager(filename, 'r') as file:
+            # Load budget data
+            file_handler = FileHandler()
+            file_handler.load_budget_from_file(file, self)
+            return True
+
+# Usage in main program
+enhanced_budget = EnhancedBudget()
+
+# Create checking account
+checking = Account("Checking", "Checking", 1500)
+checking.add_funds(2000, "Salary deposit")
+checking.remove_funds(75, "Grocery shopping")
+
+# Create investment account
+retirement = Investment("401k", "Retirement", 10000, 0.07)
+retirement.add_funds(500, "Monthly contribution")
+
+# Add accounts to budget tracking
+enhanced_budget.add_account(checking)
+enhanced_budget.add_account(retirement)
+
+# Generate reports
+checking_statement = checking.generate_statement(
+    datetime(2023, 1, 1), 
+    datetime(2023, 12, 31)
+)
+
+investment_returns = retirement.calculate_returns(30)
+
+# Save with context manager
+enhanced_budget.save_to_file("enhanced_budget.json")
+```
+
+## Stage 15: Database Integration and Concurrency (continued)
+```python
+# Add transaction (will be processed in background)
+transaction = Transaction("Grocery shopping", 75.40, "Food")
+transaction_processor.add_transaction(transaction)
+
+# Example of using the async API
+async def display_dashboard():
+    # Get data concurrently
+    recent_transactions_task = finance_api.get_recent_transactions(5)
+    category_breakdown_task = finance_api.get_category_breakdown(
+        datetime.now() - timedelta(days=30),
+        datetime.now()
+    )
+    monthly_spending_task = finance_api.get_monthly_spending()
+    
+    # Wait for all tasks to complete
+    recent_transactions = await recent_transactions_task
+    category_breakdown = await category_breakdown_task
+    monthly_spending = await monthly_spending_task
+    
+    # Display dashboard
+    print("\n----- Financial Dashboard -----")
+    
+    print("\nRecent Transactions:")
+    for t in recent_transactions:
+        print(f"- {t.date.strftime('%Y-%m-%d')} | {t.description} | ${t.amount:.2f}")
+    
+    print("\nMonthly Spending:")
+    for month, total in monthly_spending.items():
+        print(f"- {month}: ${total:.2f}")
+    
+    print("\nCategory Breakdown (Last 30 Days):")
+    for category, data in category_breakdown.items():
+        budget = data['budget']
+        spent = data['spent']
+        percentage = (spent / budget * 100) if budget > 0 else 0
+        print(f"- {category}: ${spent:.2f} / ${budget:.2f} ({percentage:.1f}%)")
+
+# Run the async function
+loop = asyncio.get_event_loop()
+loop.run_until_complete(display_dashboard())
+
+# Add historical data analysis functionality
+async def analyze_historical_data():
+    # Get historical monthly data
+    monthly_data = await finance_api.get_monthly_spending()
+    
+    # Calculate trends
+    months = sorted(monthly_data.keys())
+    
+    if len(months) < 2:
+        print("Not enough historical data for analysis")
+        return
+    
+    # Calculate month-over-month changes
+    changes = []
+    for i in range(1, len(months)):
+        current = monthly_data[months[i]]
+        previous = monthly_data[months[i-1]]
+        change_pct = ((current - previous) / previous * 100) if previous != 0 else 0
+        changes.append((months[i], change_pct))
+    
+    # Calculate average monthly spending
+    avg_spending = sum(monthly_data.values()) / len(monthly_data)
+    
+    # Identify highest and lowest spending months
+    highest_month = max(monthly_data.items(), key=lambda x: x[1])
+    lowest_month = min(monthly_data.items(), key=lambda x: x[1])
+    
+    # Calculate projected annual spending
+    if len(months) >= 3:
+        recent_months = months[-3:]
+        recent_avg = sum(monthly_data[m] for m in recent_months) / 3
+        annual_projection = recent_avg * 12
+    else:
+        annual_projection = avg_spending * 12
+    
+    # Display results
+    print("\n----- Historical Data Analysis -----")
+    print(f"Average Monthly Spending: ${avg_spending:.2f}")
+    print(f"Highest Spending Month: {highest_month[0]} (${highest_month[1]:.2f})")
+    print(f"Lowest Spending Month: {lowest_month[0]} (${lowest_month[1]:.2f})")
+    print(f"Projected Annual Spending: ${annual_projection:.2f}")
+    
+    print("\nMonth-over-Month Changes:")
+    for month, change in changes:
+        direction = "▲" if change > 0 else "▼" if change < 0 else "◆"
+        print(f"- {month}: {direction} {abs(change):.1f}%")
+
+# Run historical analysis
+loop.run_until_complete(analyze_historical_data())
+
+# Clean up
+transaction_processor.stop_processing()
+db_manager.close()
+```
+
+## Stage 16: Web Interface, Regular Expressions, and Type Hints
+- Web interface with Flask
+- RESTful API
+- Advanced search with regex
+- Type hints for improved code quality
+- Deployment-ready application
+- Example:
+```python
+# Stage 16: Web Interface, Regular Expressions, and Type Hints
+from flask import Flask, request, jsonify, render_template, redirect, url_for
+import re
+from typing import List, Dict, Optional, Union, Tuple, Any, TypedDict, cast
+import datetime
+import os
+from threading import Lock
+
+# Type definitions
+class CategoryDict(TypedDict):
+    name: str
+    budget: float
+    spent: float
+    percentage: float
+
+class TransactionDict(TypedDict):
+    id: str
+    date: str
+    description: str
+    amount: float
+    category: str
+    account: Optional[str]
+
+class MonthlyTotalDict(TypedDict):
+    month: str
+    total: float
+    change: Optional[float]
+    
+class ApiResponse(TypedDict):
+    success: bool
+    data: Any
+    error: Optional[str]
+
+# Flask application
+app = Flask(__name__)
+api_lock = Lock()  # For thread safety
+
+# Initialize database and services
+db_manager: DatabaseManager = DatabaseManager("finance.db")
+transaction_processor: TransactionProcessor = TransactionProcessor(db_manager)
+finance_api: FinanceAPI = FinanceAPI(db_manager)
+
+# Start transaction processing
+transaction_processor.start_processing()
+
+# Utility functions with type hints
+def format_currency(amount: float) -> str:
+    """Format amount as currency string"""
+    return f"${amount:.2f}"
+
+def parse_date(date_str: str) -> Optional[datetime.datetime]:
+    """Parse date string to datetime object"""
+    try:
+        return datetime.datetime.strptime(date_str, '%Y-%m-%d')
+    except ValueError:
+        return None
+
+def validate_transaction_input(
+    description: str, 
+    amount: str, 
+    category: str
+) -> Tuple[bool, Optional[str]]:
+    """Validate transaction input data"""
+    if not description:
+        return False, "Description is required"
+    
+    try:
+        amount_float = float(amount)
+        if amount_float <= 0:
+            return False, "Amount must be positive"
+    except ValueError:
+        return False, "Amount must be a number"
+    
+    if not category:
+        return False, "Category is required"
+    
+    return True, None
+
+def search_transactions_regex(
+    query: str, 
+    transactions: List[Transaction]
+) -> List[Transaction]:
+    """Search transactions using regex pattern"""
+    try:
+        pattern = re.compile(query, re.IGNORECASE)
+        return [t for t in transactions if pattern.search(t.description)]
+    except re.error:
+        # If invalid regex, fall back to simple substring search
+        query_lower = query.lower()
+        return [t for t in transactions if query_lower in t.description.lower()]
+
+# API routes
+@app.route('/api/transactions', methods=['GET'])
+def get_transactions() -> Any:
+    """Get transactions with optional filtering"""
+    # Parse query parameters
+    start_date_str = request.args.get('start_date')
+    end_date_str = request.args.get('end_date')
+    category = request.args.get('category')
+    account = request.args.get('account')
+    limit_str = request.args.get('limit')
+    search_query = request.args.get('query')
+    
+    # Parse dates and limit
+    start_date = parse_date(start_date_str) if start_date_str else None
+    end_date = parse_date(end_date_str) if end_date_str else None
+    limit = int(limit_str) if limit_str and limit_str.isdigit() else None
+    
+    with api_lock:
+        # Get transactions from database
+        transactions = db_manager.get_transactions(
+            start_date=start_date,
+            end_date=end_date,
+            category=category,
+            account=account,
+            limit=limit
+        )
+        
+        # Apply regex search if query provided
+        if search_query:
+            transactions = search_transactions_regex(search_query, transactions)
+        
+        # Convert to dictionaries for JSON response
+        result: List[TransactionDict] = []
+        for t in transactions:
+            transaction_dict: TransactionDict = {
+                'id': t.transaction_id,
+                'date': t.date.strftime('%Y-%m-%d'),
+                'description': t.description,
+                'amount': t.amount,
+                'category': t.category,
+                'account': getattr(t, 'account', None)
+            }
+            result.append(transaction_dict)
+        
+        response: ApiResponse = {
+            'success': True,
+            'data': result,
+            'error': None
+        }
+        return jsonify(response)
+
+@app.route('/api/categories', methods=['GET'])
+def get_categories() -> Any:
+    """Get categories with budget and spending data"""
+    with api_lock:
+        # Get current date and start of month
+        now = datetime.datetime.now()
+        start_of_month = datetime.datetime(now.year, now.month, 1)
+        
+        # Get category spending data
+        category_spending = db_manager.get_category_spending(
+            start_date=start_of_month,
+            end_date=now
+        )
+        
+        # Convert to list for JSON response
+        result: List[CategoryDict] = []
+        for name, data in category_spending.items():
+            budget = data['budget']
+            spent = data['spent']
+            percentage = (spent / budget * 100) if budget > 0 else 0
+            
+            category_dict: CategoryDict = {
+                'name': name,
+                'budget': budget,
+                'spent': spent,
+                'percentage': percentage
+            }
+            result.append(category_dict)
+        
+        response: ApiResponse = {
+            'success': True,
+            'data': result,
+            'error': None
+        }
+        return jsonify(response)
+
+@app.route('/api/monthly', methods=['GET'])
+def get_monthly() -> Any:
+    """Get monthly spending totals with change calculation"""
+    year_str = request.args.get('year')
+    year = int(year_str) if year_str and year_str.isdigit() else None
+    
+    with api_lock:
+        # Get monthly spending data
+        monthly_data = db_manager.get_monthly_totals(year)
+        
+        # Calculate month-over-month changes
+        months = sorted(monthly_data.keys())
+        result: List[MonthlyTotalDict] = []
+        
+        for i, month in enumerate(months):
+            monthly_dict: MonthlyTotalDict = {
+                'month': month,
+                'total': monthly_data[month],
+                'change': None
+            }
+            
+            # Calculate change from previous month
+            if i > 0:
+                previous = monthly_data[months[i-1]]
+                current = monthly_data[month]
+                change = ((current - previous) / previous * 100) if previous != 0 else 0
+                monthly_dict['change'] = change
+            
+            result.append(monthly_dict)
+        
+        response: ApiResponse = {
+            'success': True,
+            'data': result,
+            'error': None
+        }
+        return jsonify(response)
+
+@app.route('/api/transactions', methods=['POST'])
+def add_transaction() -> Any:
+    """Add a new transaction"""
+    data = request.json if request.is_json else {}
+    
+    if not data:
+        response: ApiResponse = {
+            'success': False,
+            'data': None,
+            'error': 'No data provided'
+        }
+        return jsonify(response), 400
+    
+    # Extract transaction data
+    description = data.get('description', '')
+    amount_str = data.get('amount', '')
+    category = data.get('category', '')
+    account = data.get('account')
+    date_str = data.get('date')
+    
+    # Validate input
+    valid, error_message = validate_transaction_input(description, amount_str, category)
+    if not valid:
+        response: ApiResponse = {
+            'success': False,
+            'data': None,
+            'error': error_message
+        }
+        return jsonify(response), 400
+    
+    # Parse amount and date
+    amount = float(amount_str)
+    date = parse_date(date_str) if date_str else datetime.datetime.now()
+    
+    # Create and process transaction
+    with api_lock:
+        transaction = Transaction(description, amount, category, date)
+        if account:
+            transaction.account = account
+        
+        transaction_processor.add_transaction(transaction)
+        
+        response: ApiResponse = {
+            'success': True,
+            'data': {
+                'id': transaction.transaction_id,
+                'date': transaction.date.strftime('%Y-%m-%d'),
+                'description': transaction.description,
+                'amount': transaction.amount,
+                'category': transaction.category,
+                'account': getattr(transaction, 'account', None)
+            },
+            'error': None
+        }
+        return jsonify(response)
+
+# Web UI routes
+@app.route('/')
+def home() -> Any:
+    """Home page / dashboard"""
+    return render_template('dashboard.html')
+
+@app.route('/transactions')
+def transactions_page() -> Any:
+    """Transactions listing page"""
+    return render_template('transactions.html')
+
+@app.route('/categories')
+def categories_page() -> Any:
+    """Categories management page"""
+    return render_template('categories.html')
+
+@app.route('/reports')
+def reports_page() -> Any:
+    """Financial reports page"""
+    return render_template('reports.html')
+
+@app.route('/search')
+def search_page() -> Any:
+    """Advanced search page with regex support"""
+    query = request.args.get('q', '')
+    return render_template('search.html', query=query)
+
+# Application setup and shutdown
+@app.before_request
+def before_request() -> None:
+    """Ensure transaction processor is running"""
+    if not transaction_processor.running:
+        transaction_processor.start_processing()
+
+@app.teardown_appcontext
+def teardown_appcontext(exception: Optional[Exception] = None) -> None:
+    """Clean up resources on application shutdown"""
+    pass  # The actual cleanup happens in shutdown_cleanup
+
+def shutdown_cleanup() -> None:
+    """Clean up resources when shutting down"""
+    transaction_processor.stop_processing()
+    db_manager.close()
+
+# Templates (simplified HTML examples)
+"""
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Finance Manager - Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/" class="active">Dashboard</a></li>
+            <li><a href="/transactions">Transactions</a></li>
+            <li><a href="/categories">Categories</a></li>
+            <li><a href="/reports">Reports</a></li>
+            <li><a href="/search">Search</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h1>Financial Dashboard</h1>
+        
+        <div class="dashboard-grid">
+            <div class="card">
+                <h2>Recent Transactions</h2>
+                <div id="recent-transactions">Loading...</div>
+            </div>
+            
+            <div class="card">
+                <h2>Budget Status</h2>
+                <div id="budget-status">Loading...</div>
+            </div>
+            
+            <div class="card">
+                <h2>Monthly Spending</h2>
+                <div id="monthly-chart">Loading...</div>
+            </div>
+            
+            <div class="card">
+                <h2>Quick Actions</h2>
+                <button id="add-transaction-btn">Add Transaction</button>
+                <button id="generate-report-btn">Generate Report</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="transaction-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Transaction</h2>
+            <form id="transaction-form">
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" name="description" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" name="amount" step="0.01" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select a category</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                
+                <button type="submit">Save Transaction</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
+"""
+
+"""
+<!-- dashboard.js -->
+document.addEventListener('DOMContentLoaded', function() {
+    // Load data for dashboard
+    fetchRecentTransactions();
+    fetchBudgetStatus();
+    fetchMonthlySpending();
+    
+    // Set up modal and buttons
+    const modal = document.getElementById('transaction-modal');
+    const addBtn = document.getElementById('add-transaction-btn');
+    const closeBtn = document.querySelector('.close');
+    
+    addBtn.onclick = function() {
+        modal.style.display = 'block';
+        fetchCategories();
+    }
+    
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+    }
+    
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+    
+    // Set up form submission
+    const form = document.getElementById('transaction-form');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        submitTransaction();
+    });
+});
+
+async function fetchRecentTransactions() {
+    try {
+        const response = await fetch('/api/transactions?limit=5');
+        const data = await response.json();
+        
+        if (data.success) {
+            displayTransactions(data.data);
+        } else {
+            showError('recent-transactions', data.error);
+        }
+    } catch (error) {
+        showError('recent-transactions', 'Failed to load transactions');
+    }
+}
+
+async function fetchBudgetStatus() {
+    try {
+        const response = await fetch('/api/categories');
+        const data = await response.json();
+        
+        if (data.success) {
+            displayBudgetStatus(data.data);
+        } else {
+            showError('budget-status', data.error);
+        }
+    } catch (error) {
+        showError('budget-status', 'Failed to load budget status');
+    }
+}
+
+async function fetchMonthlySpending() {
+    try {
+        const response = await fetch('/api/monthly');
+        const data = await response.json();
+        
+        if (data.success) {
+            displayMonthlyChart(data.data);
+        } else {
+            showError('monthly-chart', data.error);
+        }
+    } catch (error) {
+        showError('monthly-chart', 'Failed to load monthly data');
+    }
+}
+
+async function fetchCategories() {
+    try {
+        const response = await fetch('/api/categories');
+        const data = await response.json();
+        
+        if (data.success) {
+            populateCategoryDropdown(data.data);
+        }
+    } catch (error) {
+        console.error('Failed to load categories:', error);
+    }
+}
+
+async function submitTransaction() {
+    const form = document.getElementById('transaction-form');
+    const formData = new FormData(form);
+    
+    const transaction = {
+        description: formData.get('description'),
+        amount: formData.get('amount'),
+        category: formData.get('category'),
+        date: formData.get('date') || new Date().toISOString().split('T')[0]
+    };
+    
+    try {
+        const response = await fetch('/api/transactions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(transaction)
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            // Close modal and refresh data
+            document.getElementById('transaction-modal').style.display = 'none';
+            form.reset();
+            
+            // Refresh dashboard data
+            fetchRecentTransactions();
+            fetchBudgetStatus();
+            fetchMonthlySpending();
+        } else {
+            alert(`Error: ${data.error}`);
+        }
+    } catch (error) {
+        alert('Failed to save transaction');
+    }
+}
+
+function displayTransactions(transactions) {
+    const container = document.getElementById('recent-transactions');
+    
+    if (transactions.length === 0) {
+        container.innerHTML = '<p>No transactions found</p>';
+        return;
+    }
+    
+    let html = '<table><thead><tr><th>Date</th><th>Description</th><th>Category</th><th>Amount</th></tr></thead><tbody>';
+    
+    transactions.forEach(t => {
+        html += `
+            <tr>
+                <td>${t.date}</td>
+                <td>${t.description}</td>
+                <td>${t.category}</td>
+                <td class="${t.amount < 0 ? 'negative' : 'positive'}">$${Math.abs(t.amount).toFixed(2)}</td>
+            </tr>
+        `;
+    });
+    
+    html += '</tbody></table>';
+    container.innerHTML = html;
+}
+
+function displayBudgetStatus(categories) {
+    const container = document.getElementById('budget-status');
+    
+    if (categories.length === 0) {
+        container.innerHTML = '<p>No categories found</p>';
+        return;
+    }
+    
+    let html = '';
+    
+    categories.forEach(cat => {
+        const percentClass = cat.percentage > 90 ? 'danger' : 
+                           cat.percentage > 75 ? 'warning' : 'good';
+        
+        html += `
+            <div class="budget-item">
+                <div class="budget-header">
+                    <span class="category-name">${cat.name}</span>
+                    <span class="budget-amount">$${cat.spent.toFixed(2)} / $${cat.budget.toFixed(2)}</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress ${percentClass}" style="width: ${Math.min(cat.percentage, 100)}%"></div>
+                </div>
+                <div class="budget-percent">${cat.percentage.toFixed(1)}%</div>
+            </div>
+        `;
+    });
+    
+    container.innerHTML = html;
+}
+
+function displayMonthlyChart(monthlyData) {
+    const container = document.getElementById('monthly-chart');
+    
+    if (monthlyData.length === 0) {
+        container.innerHTML = '<p>No monthly data available</p>';
+        return;
+    }
+    
+    // This is a simplified example - in a real application, 
+    // you would use a charting library like Chart.js
+    let html = '<div class="chart-container">';
+    
+    const maxAmount = Math.max(...monthlyData.map(m => m.total));
+    
+    monthlyData.forEach(month => {
+        const height = (month.total / maxAmount * 100);
+        const label = month.month.substring(5); // Show only MM part
+        
+        html += `
+            <div class="chart-bar">
+                <div class="bar-value">$${month.total.toFixed(0)}</div>
+                <div class="bar" style="height: ${height}%"></div>
+                <div class="bar-label">${label}</div>
+            </div>
+        `;
+    });
+    
+    html += '</div>';
+    container.innerHTML = html;
+}
+
+function populateCategoryDropdown(categories) {
+    const select = document.getElementById('category');
+    
+    // Clear existing options except the first one
+    while (select.options.length > 1) {
+        select.remove(1);
+    }
+    
+    // Add categories
+    categories.forEach(cat => {
+        const option = document.createElement('option');
+        option.value = cat.name;
+        option.textContent = cat.name;
+        select.appendChild(option);
+    });
+}
+
+function showError(containerId, message) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = `<p class="error">${message || 'An error occurred'}</p>`;
+}
+"""
+
+# Run the application
+if __name__ == '__main__':
+    try:
+        # Set up signal handlers for cleanup
+        import signal
+        
+        def signal_handler(sig, frame):
+            print('Shutting down...')
+            shutdown_cleanup()
+            os._exit(0)
+        
+        signal.signal(signal.SIGINT, signal_handler)
+        signal.signal(signal.SIGTERM, signal_handler)
+        
+        # Run the Flask app
+        app.run(debug=True)
+    finally:
+        # Ensure cleanup happens
+        shutdown_cleanup()
+```
+
+## Project Evolution Summary
+
+Throughout the 16 stages, our Finance Manager project has evolved from a simple calculator to a full-featured web application with advanced features:
+
+### Stage 1-2: Foundation
+- Basic calculations with variables
+- User input and formatted output
+- Simple budget tracking capability
+
+### Stage 3-4: Data Organization
+- List-based transaction tracking
+- Dictionary-based category organization
+- Budget allocation and spending analysis
+
+### Stage 5-6: Analysis Capability
+- Budget threshold alerts
+- Conditional status messaging
+- Time-based spending comparisons
+
+### Stage 7-8: Modularity & Persistence
+- Function-based modular architecture
+- File-based data storage
+- Exception handling for robustness
+
+### Stage 9-10: Object-Oriented Design & Visualization
+- Class-based financial model
+- Encapsulated financial logic
+- Matplotlib visualizations
+
+### Stage 11-12: Testing & Core Completion
+- Comprehensive unit testing
+- Test-driven development practices
+- Mock objects for isolated testing
+
+### Stage 13-14: Advanced Python Features
+- Generator-based data processing
+- Functional programming for calculations
+- Decorators for validation and logging
+- Context managers for resource handling
+- Abstract base classes for financial instruments
+
+### Stage 15-16: Enterprise Features
+- SQLite database integration
+- Concurrent transaction processing
+- Asynchronous data retrieval
+- Web interface with Flask
+- RESTful API for remote access
+- Advanced searching with regex
+- Type hints for code safety
+- Deployment-ready application
+
+The application has grown from a simple tool that adds up a few numbers to a sophisticated financial management system capable of handling multiple accounts, complex analysis, and supporting multiple users through its web interface. Each stage built directly on the previous ones, introducing new Python concepts while maintaining project continuity.
+
+This natural progression demonstrates how Python concepts can be applied to real-world problems, creating increasingly sophisticated solutions as new language features are introduced.
