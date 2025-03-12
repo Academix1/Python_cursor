@@ -13,6 +13,10 @@
   - Structuring error analysis prompts with complete context
 - **AI Assistance**: Using Cursor's Tab completion and basic Chat features
 - **Code Reading**: Tracing variable values in simple programs, understanding basic program flow
+- **Debugger Skills**: 
+  - Introduction to Python's built-in debugger (pdb) and IDE debuggers
+  - Setting simple breakpoints and examining variable values
+  - Using print vs debugger for inspection
 - **Project**: Create basic text analyzer that counts words, characters, and performs simple text statistics
 - **Confidence Building**: "I can write and run simple Python programs and get help when I'm stuck"
 
@@ -26,6 +30,10 @@
   - Communicating your current understanding to refine AI responses
 - **AI Assistance**: Using Cursor Chat for conceptual explanations and implementations
 - **Code Reading**: Understanding data transformations and storage patterns
+- **Debugger Skills**:
+  - Inspecting complex data structures in the debugger
+  - Using pretty-print in debugging sessions
+  - Setting up watch expressions for data structures
 - **Project**: Implement storage for multiple text documents with metadata and categorization
 - **Confidence Building**: "I can organize and manipulate data effectively with appropriate structures"
 
@@ -39,6 +47,10 @@
   - Building multi-turn conversations to refine solutions
 - **AI Assistance**: Getting help with logical implementations via Cmd+K
 - **Code Reading**: Tracing execution paths in programmatic logic
+- **Debugger Skills**:
+  - Using conditional breakpoints
+  - Stepping over, into, and out of functions
+  - Tracking loop iterations and conditional branches
 - **Project**: Build categorization and filtering for stored content with complex criteria
 - **Confidence Building**: "I can implement decision-making logic to solve real problems"
 
@@ -52,6 +64,11 @@
   - Requesting alternative implementation approaches
 - **AI Assistance**: Generating function implementations with detailed specifications
 - **Code Reading**: Following function call flows and understanding scope
+- **Debugger Skills**:
+  - Examining function call stacks
+  - Inspecting parameter values and return values
+  - Setting breakpoints inside functions
+  - Using post-mortem debugging
 - **Document Reading**: Using AI to analyze function requirements documents
 - **Project**: Create modular text analysis functions (readability scores, keyword extraction, sentiment analysis)
 - **Confidence Building**: "I can create reusable components with clear interfaces and documentation"
@@ -68,6 +85,10 @@
   - Prompting for appropriate design patterns
 - **AI Assistance**: Using Composer to design class structures and relationships
 - **Code Reading**: Understanding class relationships and interactions
+- **Debugger Skills**:
+  - Inspecting object attributes and methods
+  - Debugging constructor behavior
+  - Visualizing object state changes
 - **Project**: Convert text analyzer to class-based architecture with Document, Analyzer, and Result classes
 - **Confidence Building**: "I can model real-world entities in my code using object-oriented principles"
 
@@ -81,6 +102,10 @@
   - Soliciting analyses of architectural decisions
 - **AI Assistance**: Designing class hierarchies and implementing inheritance relationships
 - **Code Reading**: Tracing method resolution through inheritance chains
+- **Debugger Skills**:
+  - Debugging method resolution in inheritance chains
+  - Inspecting parent class attributes
+  - Tracking polymorphic method calls
 - **Document Reading**: Using AI to analyze technical specifications for class design
 - **Project**: Create specialized content types (Articles, Documents, Notes) with shared behaviors
 - **Confidence Building**: "I can design flexible object hierarchies that model complex domains"
@@ -95,6 +120,10 @@
   - Requesting step-by-step refactoring plans
 - **AI Assistance**: Using Cursor for codebase navigation and organization
 - **Code Reading**: Understanding import relationships and dependencies
+- **Debugger Skills**:
+  - Debugging across module boundaries
+  - Setting breakpoints in imported modules
+  - Using IDE module dependency visualizers
 - **Project**: Restructure application into well-organized packages with clear boundaries
 - **Confidence Building**: "I can organize large codebases effectively with proper modularization"
 
@@ -108,6 +137,11 @@
   - Requesting ways to combine multiple patterns
 - **AI Assistance**: Implementing complex function patterns with Cursor
 - **Code Reading**: Understanding functional patterns and execution flow
+- **Debugger Skills**:
+  - Debugging decorator behavior
+  - Inspecting closure variables
+  - Tracing functional transformations
+  - Using debugger to understand evaluation order
 - **Document Reading**: Analyzing API documentation to implement integrations
 - **Project**: Add logging, validation, caching, and performance measurement decorators
 - **Confidence Building**: "I can implement sophisticated function patterns for clean, efficient code"
@@ -124,6 +158,11 @@
   - Specifying error handling and retry policies
 - **AI Assistance**: Getting help with library integration using Agent mode
 - **Code Reading**: Understanding library usage patterns and structures
+- **Debugger Skills**:
+  - Debugging third-party library interactions
+  - Using source stepping into libraries when available
+  - Setting breakpoints at integration boundaries
+  - Using logging alongside debugging
 - **Project**: Integrate NLP libraries (NLTK, spaCy) for advanced text analysis
 - **Confidence Building**: "I can leverage existing libraries to enhance my applications"
 
@@ -137,6 +176,11 @@
   - Structuring requests for data analysis approaches
 - **AI Assistance**: Generating visualization code and implementing dashboards
 - **Code Reading**: Understanding data pipeline transformations
+- **Debugger Skills**:
+  - Inspecting data frames and visualization objects
+  - Using breakpoints to verify data transformations
+  - Debugging visual element generation
+  - Capturing and examining intermediate results
 - **Document Reading**: Analyzing requirements for dashboard implementations
 - **Project**: Create insight dashboards for content analysis with interactive visualizations
 - **Confidence Building**: "I can transform data into meaningful visualizations that convey insights"
@@ -151,6 +195,11 @@
   - Communicating system reliability requirements
 - **AI Assistance**: Using Cursor for debugging and error pattern recognition
 - **Code Reading**: Tracing error handling paths and recovery mechanisms
+- **Debugger Skills**:
+  - Advanced exception handling in debuggers
+  - Setting exception breakpoints
+  - Post-mortem debugging after crashes
+  - Using debugger to simulate failure scenarios
 - **Project**: Implement comprehensive error handling throughout the application with graceful degradation
 - **Confidence Building**: "I can build robust systems that handle failures gracefully"
 
@@ -164,6 +213,11 @@
   - Communicating performance characteristics of data
 - **AI Assistance**: Getting optimization suggestions with Agent mode
 - **Code Reading**: Identifying bottlenecks and optimization opportunities
+- **Debugger Skills**:
+  - Using profiler-integrated debugging
+  - Memory usage inspection during execution
+  - Time measurement between breakpoints
+  - Conditional breakpoints based on performance criteria
 - **Document Reading**: Analyzing performance requirements and specifications
 - **Project**: Optimize content processing and analysis for large documents and datasets
 - **Confidence Building**: "I can identify and resolve performance issues methodically"
@@ -180,6 +234,11 @@
   - Describing query requirements and usage patterns
 - **AI Assistance**: Designing database schemas and implementing data access layers
 - **Code Reading**: Understanding data access patterns and persistence strategies
+- **Debugger Skills**:
+  - Inspecting SQL queries generated by ORMs
+  - Debugging transaction behavior
+  - Setting breakpoints in data access layer
+  - Using database-specific debugging tools alongside code debuggers
 - **Project**: Implement database storage for content, users, and analytics with proper ORM patterns
 - **Confidence Building**: "I can design and implement robust data persistence for production applications"
 
@@ -193,6 +252,11 @@
   - Requesting comprehensive API documentation
 - **AI Assistance**: Using Agent mode for implementing API endpoints and documentation
 - **Code Reading**: Understanding request/response flows and middleware patterns
+- **Debugger Skills**:
+  - Setting breakpoints in API request handlers
+  - Inspecting request and response objects
+  - Debugging middleware chains
+  - Using API debugging tools (Postman, curl) alongside code debuggers
 - **Document Reading**: Analyzing API specifications and implementing them accurately
 - **Project**: Create a web API for content submission and recommendations with authentication
 - **Confidence Building**: "I can build professional APIs that follow best practices and standards"
@@ -207,6 +271,11 @@
   - Requesting integration architecture for ML components
 - **AI Assistance**: Using full Cursor capabilities for complex implementations
 - **Code Reading**: Understanding AI model integration and processing pipelines
+- **Debugger Skills**:
+  - Inspecting model inputs and outputs
+  - Debugging preprocessing pipelines
+  - Setting breakpoints in inference paths
+  - Using specialized ML debugging tools with code debuggers
 - **Project**: Implement sophisticated recommendation system with embeddings and similarity matching
 - **Confidence Building**: "I can integrate and leverage AI models in production systems"
 
@@ -220,6 +289,11 @@
   - Creating holistic system descriptions for complete design collaboration
 - **AI Assistance**: Using Cursor for deployment configuration and comprehensive documentation
 - **Code Reading**: Understanding deployment architectures and configurations
+- **Debugger Skills**:
+  - Remote debugging in different environments
+  - Debugging containerized applications
+  - Using logging and monitoring alongside debugging
+  - Production debugging techniques with limited access
 - **Document Reading**: Analyzing production requirements and implementing them
 - **Project**: Complete the production-ready Content Analyzer & Recommender System with deployment
 - **Confidence Building**: "I am a production-ready Python developer capable of building professional systems"
@@ -256,6 +330,12 @@
 - **Weeks 9-12**: From single modules to integrated systems
 - **Weeks 13-16**: From system components to complete architectures
 
+### Debugger Skills Progression
+- **Weeks 1-4**: From basic breakpoints to function inspection
+- **Weeks 5-8**: From single-function debugging to complex object and module debugging
+- **Weeks 9-12**: From local debugging to integrated systems and performance debugging
+- **Weeks 13-16**: From development debugging to production and deployment debugging
+
 ### Document Reading Skills Progression
 - **Weeks 1-4**: Understanding basic requirements with AI assistance
 - **Weeks 5-8**: Analyzing technical specifications for implementation
@@ -267,4 +347,3 @@
 - **Weeks 5-8**: "I can design structured systems and collaborate with AI on architecture"
 - **Weeks 9-12**: "I can build sophisticated applications and optimize them with AI assistance"
 - **Weeks 13-16**: "I am a production-ready Python developer who leverages AI as a collaborative partner"
-
