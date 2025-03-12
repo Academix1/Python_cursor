@@ -1,5 +1,5 @@
-# Python Foundations: Complete Beginner's Journey
-## A 12-Week Comprehensive Course with Integrated Financial Project
+# Python Foundations: Complete Beginner to Advanced Journey
+## A 16-Week Comprehensive Course with Integrated Financial Project
 ---
 
 ## Phase 1: Python Basics & Essential Developer Skills (Weeks 1-2)
@@ -452,13 +452,11 @@
 - Measuring and improving test coverage
 
 #### Project Integration: Finance Manager Stage 12
-- Complete application with all features
-- Add advanced features like:
-  - Financial forecasting
-  - Investment tracking
-  - Savings goals
-  - Data import/export
-  - Comprehensive reporting
+- Complete core application with all features
+- Add comprehensive testing
+- Implement continuous integration concepts
+- Add data import/export features
+- Create comprehensive reporting
 
 #### Assessment
 - TDD implementation challenge
@@ -470,6 +468,183 @@
 
 ---
 
+## Phase 7: Advanced Python Features (Weeks 13-14)
+
+### Week 13: Iterators, Generators, and Functional Programming
+#### Python Skills
+- Iterator protocol (`__iter__`, `__next__`)
+- Generator functions with `yield`
+- Generator expressions
+- Lambda functions and closures
+- Functional programming: `map`, `filter`, `reduce`
+
+#### AI Assistant Skills
+- Using AI to optimize data processing code
+- Getting functional alternatives to imperative code
+- **Data Pipeline Prompts**: Describing processing steps and transformations
+- **Iteration Pattern Design**: Creating prompts for complex iteration scenarios
+
+#### Code Reading Skills
+- Understanding generator control flow
+- Reading functional programming patterns
+- Analyzing memory and performance implications of iterators
+
+#### Debugging Skills
+- Debugging generators and iterators
+- Using breakpoints in generator functions
+- Stepping through lazy evaluation
+- Analyzing performance bottlenecks
+
+#### Project Integration: Finance Manager Stage 13
+- Implement data processing pipelines using generators
+- Create lazy-loaded transaction history
+- Add functional processing for financial calculations
+- Implement memory-efficient report generation
+- Create investment scenario generators
+
+#### Assessment
+- Generator implementation exercises
+- Streaming data processor project
+- **Analysis**: Evaluation of prompts for functional programming tasks
+
+#### Learning Outcome
+"I can implement memory-efficient data processing using generators and functional programming techniques and clearly communicate these patterns through prompts"
+
+---
+
+### Week 14: Decorators, Context Managers, and Advanced OOP
+#### Python Skills
+- Creating and using decorators
+- Context managers with `with` statements
+- Creating custom context managers
+- Advanced OOP: Multiple inheritance, mixins
+- Magic/dunder methods (`__str__`, `__repr__`, `__eq__`, etc.)
+- Abstract base classes and interfaces
+
+#### AI Assistant Skills
+- Getting AI help with decorator patterns
+- Using AI for OOP design challenges
+- **Behavioral Pattern Prompts**: Describing decorators and context managers
+- **Interface Design Communication**: Creating prompts for complex object interactions
+
+#### Code Reading Skills
+- Understanding decorator execution flow
+- Reading context manager implementations
+- Analyzing class hierarchies and method resolution order
+
+#### Debugging Skills
+- Debugging decorated functions
+- Troubleshooting context manager issues
+- Resolving inheritance conflicts
+- Inspecting method resolution order
+
+#### Project Integration: Finance Manager Stage 14
+- Add decorators for transaction logging and validation
+- Implement context managers for file handling
+- Create abstract base classes for financial instruments
+- Add advanced OOP features to financial model
+- Implement multiple inheritance for specialized accounts
+
+#### Assessment
+- Decorator and context manager exercises
+- Framework extension project
+- **Evaluation**: Quality of prompts for advanced Python patterns
+
+#### Learning Outcome
+"I can implement advanced Python features like decorators and context managers, design sophisticated class hierarchies, and communicate these concepts effectively through prompts"
+
+---
+
+## Phase 8: Specialized Applications (Weeks 15-16)
+
+### Week 15: Concurrency, Async Programming, and Database Integration
+#### Python Skills
+- Threading and multiprocessing
+- Asynchronous programming with `async`/`await`
+- Database connectivity with SQLite
+- SQL basics and query execution
+- ORM concepts with SQLAlchemy introduction
+
+#### AI Assistant Skills
+- Using AI to design concurrent systems
+- Getting database schema suggestions
+- **Concurrency Pattern Prompts**: Describing parallel execution needs
+- **Data Persistence Requirements**: Creating database-focused prompts
+
+#### Code Reading Skills
+- Understanding concurrent execution patterns
+- Reading asynchronous code
+- Analyzing database access patterns
+- Understanding query execution plans
+
+#### Debugging Skills
+- Debugging thread synchronization issues
+- Troubleshooting async execution
+- Diagnosing database performance problems
+- Using database query analyzers
+
+#### Project Integration: Finance Manager Stage 15
+- Add SQLite database for transaction storage
+- Implement concurrent transaction processing
+- Create async API for financial data retrieval
+- Build performance dashboards using async data loading
+- Add historical data analysis with efficient queries
+
+#### Assessment
+- Concurrency implementation exercises
+- Database-backed application project
+- **Prompt Portfolio**: Evaluation of database and concurrency prompts
+
+#### Learning Outcome
+"I can implement concurrent and asynchronous systems, work with databases effectively, and communicate complex execution patterns through clear prompts"
+
+---
+
+### Week 16: Web Development, Regular Expressions, and Type Hints
+#### Python Skills
+- Web application basics with Flask
+- RESTful API development
+- Regular expressions with the `re` module
+- Static type annotations with the `typing` module
+- Type checking with mypy
+
+#### AI Assistant Skills
+- Using AI for API design
+- Getting regex pattern suggestions
+- **Web Interface Requirements**: Creating prompts for web features
+- **Type Specification Prompts**: Communicating types and interfaces
+
+#### Code Reading Skills
+- Understanding web application structure
+- Reading and analyzing regex patterns
+- Interpreting type annotations
+- Analyzing API specifications
+
+#### Debugging Skills
+- Debugging web application issues
+- Testing and refining regex patterns
+- Resolving type checking errors
+- API endpoint testing
+
+#### Project Integration: Finance Manager Stage 16
+- Create web interface for the finance manager
+- Implement RESTful API for remote access
+- Add advanced search with regex
+- Implement comprehensive type hints
+- Add static analysis to CI pipeline
+- Deploy the complete application
+
+#### Assessment
+- Web application implementation project
+- Type-annotated module implementation
+- **Final Project**: Complete finance manager with all advanced features
+- **Final Prompt Portfolio**: Comprehensive collection of effective prompts across all domains
+
+#### Learning Outcome
+"I can develop web applications, use advanced pattern matching, implement type-safe code, and effectively communicate requirements across all Python domains through clear, effective prompts"
+
+---
+
 ## Project Development Progression
 
 ### Personal Finance Manager/Budget Tracker Evolution
@@ -478,7 +653,15 @@
 3. **Stage 5-6**: Conditional alerts and monthly analysis
 4. **Stage 7-8**: Modular functions and file persistence
 5. **Stage 9-10**: OOP design and data visualization
-6. **Stage 11-12**: Complete testing and advanced features
+6. **Stage 11-12**: Complete testing and core features
+7. **Stage 13-14**: Advanced Python features and efficient processing
+8. **Stage 15-16**: Concurrent processing, database, and web interface
+
+### Progressive Advanced Features
+- **Stage 13**: Memory-efficient large transaction history
+- **Stage 14**: Transaction validation and financial instrument abstraction
+- **Stage 15**: Multi-user support and concurrent transaction processing
+- **Stage 16**: Web access and API integration with other financial services
 
 ### Prompt Engineering Assessment Framework
 
@@ -511,10 +694,14 @@ Throughout the course, prompt engineering skills will be evaluated using the fol
 
 ### Final Deliverable
 By the end of the course, students will have:
-1. A production-ready Personal Finance Manager application
-2. A comprehensive portfolio of effective prompts
-3. A complete test suite demonstrating proper testing practices
-4. Documentation of their learning journey across all skill dimensions
+1. A production-ready Personal Finance Manager web application with:
+   - Comprehensive financial tracking features
+   - Memory-efficient processing for large datasets
+   - Database persistence and multi-user support
+   - Modern web interface and API access
+   - Complete test suite and type safety
+2. A comprehensive portfolio of effective prompts across all Python domains
+3. Documentation of their learning journey across all skill dimensions
 
 ---
 
@@ -525,15 +712,20 @@ By the end of the course, students will have:
 - Text editor or IDE (VS Code recommended)
 - Course GitHub repository access
 - AI assistant account (specific platform to be determined)
-- matplotlib and related visualization libraries
-- pytest framework and extensions
+- SQLite and database visualization tools
+- Flask and related web development libraries
+- Pytest framework and extensions
 - Coverage.py for test coverage analysis
+- Mypy for static type checking
 
 ### Recommended Resources
 - "Python Crash Course" by Eric Matthes
 - "Effective Python" by Brett Slatkin
+- "Fluent Python" by Luciano Ramalho
 - "Python Testing with pytest" by Brian Okken
 - "Test-Driven Development with Python" by Harry Percival
+- "Database Design for Mere Mortals" by Michael J. Hernandez
+- "Flask Web Development" by Miguel Grinberg
 - Official Python documentation (python.org)
 - Course-specific prompt engineering and testing handbook
 
