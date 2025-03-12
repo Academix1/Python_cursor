@@ -1,478 +1,700 @@
-# Comprehensive Beginner Python Course with AI, Code Reading, and Debugging Skills
-## Python Foundations: Complete Beginner's Journey (10 weeks)
+# Python Foundations: Complete Beginner's Journey
+## A 12-Week Comprehensive Course with Integrated Prompt Engineering and Testing Skills
 
-### Phase 1: Python Basics & Essential Developer Skills (Weeks 1-2)
+---
 
-#### Week 1: First Steps with Python & Development Environment
-- **Python Skills**: Variables, data types, basic operations
-- **AI Assistant Skills**: 
-  - Understanding AI coding assistants' capabilities
-  - Basic prompts for code explanations
-  - Using AI to clarify concepts
-- **Code Reading Skills**:
-  - Line-by-line execution tracing
-  - Identifying different parts of a program
-  - Reading code aloud to build understanding
-- **Debugging Skills**:
-  - Understanding error messages
-  - Using print statements strategically
-  - Basic IDE debugging interface introduction
-- **Project**: Simple calculator with guided debugging practice
-- **Learning Outcome**: "I can write, read, and debug basic Python code"
+## Course Overview
 
-#### Week 2: Data Types & Structured Problem Solving
-- **Python Skills**: Strings, numbers, type conversion, input/output
-- **AI Assistant Skills**:
-  - Formulating clear syntax questions
-  - Getting examples through AI prompting
-- **Code Reading Skills**:
-  - Predicting output before running code
-  - Tracing variable changes throughout execution
-  - Reading documentation and examples
-- **Debugging Skills**:
-  - Identifying common type errors
-  - Debugging string formatting issues
-  - Finding and fixing input/output problems
-- **Project**: Text processor with systematic debugging practice
-- **Learning Outcome**: "I can manipulate different data types and troubleshoot errors methodically"
+This comprehensive 12-week course guides beginners through Python programming fundamentals while simultaneously developing essential developer skills including code reading, debugging, testing, and AI-assisted programming. The curriculum uniquely integrates prompt engineering and testing skills throughout, preparing students to effectively collaborate with AI coding assistants, write reliable, tested code, and build a solid foundation in Python.
 
-### Phase 2: Data Structures & Problem-Solving Techniques (Weeks 3-4)
+### Learning Outcomes
+By the end of this course, students will be able to:
+- Write, read, and debug Python code with confidence
+- Design appropriate data structures and implement efficient algorithms
+- Create modular, object-oriented programs
+- Effectively collaborate with AI coding assistants through well-crafted prompts
+- Debug code systematically using both traditional and AI-assisted methods
+- Write and run tests to verify code correctness and reliability
+- Use test-driven development principles for building robust applications
+- Build complete, well-tested applications that integrate external libraries
 
-#### Week 3: Lists & Collections with Systematic Analysis
-- **Python Skills**: Lists, list methods, basic list operations
-- **AI Assistant Skills**:
-  - Getting AI explanations for complex operations
-  - Using AI to suggest best practices
-- **Code Reading Skills**:
-  - Analyzing list transformations
-  - Visualizing list operations mentally
-  - Understanding indexing and slicing notation
-- **Debugging Skills**:
-  - Fixing index errors and boundary issues
-  - Visualizing list contents during execution
-  - Using debugger to inspect list values
-- **Project**: Todo list manager with comprehensive testing
-- **Learning Outcome**: "I can work with lists and efficiently diagnose collection-related problems"
+---
 
-#### Week 4: Dictionaries, Sets & Data Structure Debugging
-- **Python Skills**: Dictionaries, sets, nested data structures
-- **AI Assistant Skills**:
-  - Using input/output examples in prompts
-  - Getting AI suggestions for data structure optimization
-- **Code Reading Skills**:
-  - Reading complex data structure definitions
-  - Tracing dictionary and set operations
-  - Understanding nested data access patterns
-- **Debugging Skills**:
-  - Troubleshooting key errors
-  - Inspecting nested data structures
-  - Using pretty-print for complex structures
-- **Project**: Contact management system with nested data validation
-- **Learning Outcome**: "I can design appropriate data structures and debug complex data issues"
+## Phase 1: Python Basics & Essential Developer Skills (Weeks 1-2)
 
-### Phase 3: Logic, Control Flow & Execution Tracing (Weeks 5-6)
+### Week 1: First Steps with Python & Development Environment
+#### Python Skills
+- Variables, data types, basic operations
+- Python syntax fundamentals
+- Running Python programs
 
-#### Week 5: Conditionals & Logical Debugging
-- **Python Skills**: If/else statements, boolean operations, comparison operators
-- **AI Assistant Skills**:
-  - Using AI to review logical expressions
-  - Getting alternative logical implementations
-- **Code Reading Skills**:
-  - Tracing execution paths in conditional structures
-  - Identifying all possible execution branches
-  - Understanding complex boolean expressions
-- **Debugging Skills**:
-  - Using breakpoints in conditional blocks
-  - Debugging boolean logic errors
-  - Validating condition boundaries
-- **Project**: Decision-making application with edge case handling
-- **Learning Outcome**: "I can implement, trace, and debug complex decision logic"
+#### AI Assistant Skills
+- Understanding AI coding assistants' capabilities
+- **Foundation Prompting**: Basic prompt structure and clarity
+- **Prompt Comparison Exercise**: Evaluating prompt effectiveness 
+- **Documentation Practice**: Creating simple templates for syntax questions
 
-#### Week 6: Loops & Iteration Debugging
-- **Python Skills**: For loops, while loops, nested loops, loop control
-- **AI Assistant Skills**:
-  - Explaining algorithm intentions to AI
-  - Getting AI to optimize loop efficiency
-- **Code Reading Skills**:
-  - Mentally simulating loop execution
-  - Understanding nested loop interactions
-  - Analyzing loop efficiency and termination conditions
-- **Debugging Skills**:
-  - Debugging infinite loops
-  - Using loop variable watches
-  - Stepping through iterations in debugger
-- **Project**: Data analysis tool with robust loop implementations
-- **Learning Outcome**: "I can implement efficient loops and systematically debug iteration issues"
+#### Code Reading Skills
+- Line-by-line execution tracing
+- Identifying different parts of a program
+- Reading code aloud to build understanding
 
-### Phase 4: Functions, Modularity & Structured Debugging (Weeks 7-8)
+#### Debugging Skills
+- Understanding error messages
+- Using print statements strategically
+- Basic IDE debugging interface introduction
 
-#### Week 7: Functions & Component-Level Debugging
-- **Python Skills**: Function definition, parameters, return values, scope
-- **AI Assistant Skills**:
-  - Writing clear function specifications for AI
-  - Using AI to suggest function improvements
-- **Code Reading Skills**:
-  - Following function call execution flow
-  - Understanding parameter passing and return values
-  - Reading recursive function implementations
-- **Debugging Skills**:
-  - Setting function breakpoints
-  - Inspecting parameter values
-  - Analyzing call stacks
-  - Isolating function-specific bugs
-- **Project**: Utility function library with comprehensive testing
-- **Learning Outcome**: "I can design modular functions and debug them in isolation"
+#### Project
+Simple calculator with guided debugging practice
+- **Integration Activity**: "AI Debugging Partner" - Write prompts to get help understanding error messages
+- **Deliverable**: Working calculator program + documented prompts used during development
 
-#### Week 8: Files, Errors & External Interaction Debugging
-- **Python Skills**: File operations, exception handling, debugging techniques
-- **AI Assistant Skills**:
-  - Getting AI help with file processing patterns
-  - Using AI for error handling suggestions
-- **Code Reading Skills**:
-  - Understanding file operation patterns
-  - Analyzing exception handling flow
-  - Reading code that interacts with external systems
-- **Debugging Skills**:
-  - Debugging file access issues
-  - Exception breakpoints
-  - Simulating error conditions
-  - Post-mortem debugging
-- **Project**: Log analyzer with comprehensive error handling
-- **Learning Outcome**: "I can work with external data and systematically debug interaction issues"
+#### Assessment
+- Basic Python syntax quiz
+- Calculator project evaluation
+- **Prompt Quality**: Evaluation of 2-3 prompts created during the project
 
-### Phase 5: OOP, Libraries & Advanced Debugging (Weeks 9-10)
+#### Learning Outcome
+"I can write, read, and debug basic Python code and effectively request AI assistance for syntax and error understanding"
 
-#### Week 9: Basic Classes & Object-Oriented Debugging
-- **Python Skills**: Class definition, attributes, methods, instances
-- **AI Assistant Skills**:
-  - Getting AI help with class design
-  - Using AI to suggest appropriate methods
-- **Code Reading Skills**:
-  - Reading class definitions and relationships
-  - Understanding instance creation and lifecycle
-  - Tracing method execution flow
-- **Debugging Skills**:
-  - Inspecting object state
-  - Debugging constructor issues
-  - Tracking attribute changes
-  - Using object inspection in debugger
-- **Project**: Simple game with class-based architecture
-- **Learning Outcome**: "I understand OOP basics and can debug object-related issues"
+---
 
-#### Week 10: Libraries, Integration & System-Level Debugging
-- **Python Skills**: Imports, standard library, third-party packages
-- **AI Assistant Skills**:
-  - Using AI to find appropriate libraries
-  - Getting AI help with API usage
-- **Code Reading Skills**:
-  - Reading library documentation and source code
-  - Understanding import and dependency patterns
-  - Analyzing API usage examples
-- **Debugging Skills**:
-  - Debugging import issues
-  - Diagnosing library integration problems
-  - Using library-specific debugging tools
-  - Isolating third-party vs. your code issues
-- **Project**: Data visualization application with multiple libraries
-- **Learning Outcome**: "I can integrate external libraries and debug complex interactions"
+### Week 2: Data Types & Structured Problem Solving
+#### Python Skills
+- Strings, numbers, type conversion
+- Input/output operations
+- String formatting and manipulation
 
-## Special Focus Areas
+#### AI Assistant Skills
+- Formulating clear syntax questions
+- Getting examples through AI prompting
+- **Context Setting in Prompts**: Providing relevant background information
+- **Example-Driven Prompting**: Using input/output examples to clarify expectations
 
-### 1. Progressive Debugging Techniques
-- Week 1-2: Print-based debugging and simple error messages
-- Week 3-4: IDE debugger introduction and inspection tools
-- Week 5-6: Breakpoints, conditions, and execution control
-- Week 7-8: Component isolation and systematic debugging
-- Week 9-10: Object inspection and integrated system debugging
+#### Code Reading Skills
+- Predicting output before running code
+- Tracing variable changes throughout execution
+- Reading documentation and examples
 
-### 2. Code Reading Progression
-- Week 1-2: Line-by-line reading and basic syntax recognition
-- Week 3-4: Data structure and transformation pattern recognition
-- Week 5-6: Algorithmic pattern recognition and flow tracing
-- Week 7-8: Function interaction and component relationship reading
-- Week 9-10: System-level architecture and library integration reading
+#### Debugging Skills
+- Identifying common type errors
+- Debugging string formatting issues
+- Finding and fixing input/output problems
 
-### 3. AI Assistance Integration
-- Always have students attempt problems before using AI
-- Use AI to explain different approaches after students complete implementation
-- Practice debugging AI-generated code intentionally
-- Learn to read and understand AI-generated solutions critically
+#### Project
+Text processor with systematic debugging practice
+- **Mini-Workshop**: Crafting prompts for string manipulation tasks
+- **Integration Activity**: Document prompts used for implementing different features
 
-### 4. Hands-On Debugging Sessions
-- Weekly debugging challenges with intentional errors
-- "Bug hunt" exercises in progressively complex code
-- Peer debugging sessions where students fix each other's code
-- Real-world code analysis with common error patterns
+#### Assessment
+- String manipulation exercises
+- Text processor project evaluation
+- **Prompt Quality**: Evaluate clarity and specificity of prompts used
 
-### 5. Code Reading Workshops
-- Regular code review sessions of both student and example code
-- "Code explanation" exercises where students narrate code execution
-- "Reverse engineering" activities to understand unfamiliar code
-- Progressive exposure to different coding styles and patterns
+#### Learning Outcome
+"I can manipulate different data types, troubleshoot errors methodically, and craft clear prompts for working with text data"
 
-# Enhanced Prompt Engineering Components for Python Code Ascent
+---
 
-Based on your interest in strengthening the prompt engineering aspects of the curriculum, here's a detailed plan to integrate these additional components:
+## Phase 2: Data Structures & Problem-Solving Techniques (Weeks 3-4)
 
-## 1. Specific Prompt Engineering Exercises and Challenges
+### Week 3: Lists & Collections with Systematic Analysis
+#### Python Skills
+- Lists, list methods, basic list operations
+- List comprehensions
+- Nested lists and matrix operations
 
-### Weekly Prompt Labs
-- **Syntax Correction Challenges**: Students receive buggy code and practice writing prompts to get AI to identify and fix specific bugs
-- **Translation Exercises**: Convert pseudocode to working Python code through prompts
-- **Optimization Challenges**: Take working code and craft prompts to improve performance or readability
-- **Feature Extension**: Add new features to existing code through carefully crafted prompts
+#### AI Assistant Skills
+- Getting AI explanations for complex operations
+- Using AI to suggest best practices
+- **Data-Focused Prompting**: Techniques for describing data transformations
+- **Constraint Communication**: Specifying limitations and requirements
 
-### Progressive Difficulty
-- **Week 1-4**: Simple, single-purpose prompts (e.g., "Fix this syntax error")
-- **Week 5-8**: Multi-part prompts with constraints (e.g., "Implement this class with these efficiency requirements")
-- **Week 9-12**: System design prompts (e.g., "Design an authentication system with these security constraints")
-- **Week 13-16**: Production-level prompts (e.g., "Create a deployment pipeline with these monitoring requirements")
+#### Code Reading Skills
+- Analyzing list transformations
+- Visualizing list operations mentally
+- Understanding indexing and slicing notation
 
-### Challenge Activities
-- **Prompt Battle**: Students compete to create the most effective prompt for the same task
-- **Minimal Prompt Challenge**: Solve problems with the shortest effective prompt
-- **Context Window Optimization**: Craft prompts that make efficient use of context limits
-- **AI Pair Programming Simulation**: Practice interactive multi-turn prompting sessions
+#### Debugging Skills
+- Fixing index errors and boundary issues
+- Visualizing list contents during execution
+- Using debugger to inspect list values
 
-## 2. Evaluating AI-Generated Code and Iterative Improvement
+#### Project
+Todo list manager with comprehensive testing
+- **Practical Exercise**: Writing prompts for different list operations
+- **Integration Activity**: "Prompt Engineering Log" - Maintain documentation of prompts used, responses received, and improvements made
 
-### Code Evaluation Framework
-- **Correctness Assessment**: Does the generated code do what was requested?
-- **Efficiency Analysis**: Is the solution optimally implemented?
-- **Readability Evaluation**: Is the code well-documented and easy to understand?
-- **Edge Case Handling**: Does the solution handle unexpected inputs?
+#### Assessment
+- List manipulation coding challenges
+- Todo list project functionality
+- **Prompt Effectiveness**: Evaluation as part of project grading
 
-### Iterative Improvement Process
-- **Identify Weaknesses**: Document specific shortcomings in AI-generated code
-- **Prompt Refinement**: Revise prompts to address identified weaknesses
-- **A/B Testing**: Compare outputs from different prompts for the same task
-- **Prompt Version Control**: Track prompt iterations and their corresponding outputs
+#### Learning Outcome
+"I can work with lists and efficiently diagnose collection-related problems while creating effective prompts for data manipulation"
 
-### Weekly Review Sessions
-- **Code Audit**: Analyze AI-generated solutions with instructor guidance
-- **Improvement Workshop**: Collaboratively refine prompts based on output analysis
-- **Pattern Recognition**: Identify common AI misunderstandings and how to avoid them
-- **Documentation Practice**: Record effective prompting patterns for future reference
+---
 
-## 3. Rubric for Assessing Prompt Quality
+### Week 4: Dictionaries, Sets & Data Structure Debugging
+#### Python Skills
+- Dictionaries, sets, nested data structures
+- Dictionary methods and operations
+- Choosing appropriate data structures
 
-### Clarity Elements (25%)
-- **Specificity**: How precisely the requirements are stated
-- **Context Provision**: Inclusion of relevant background information
-- **Terminology Accuracy**: Use of correct technical terms
-- **Structural Organization**: Logical ordering of requirements
+#### AI Assistant Skills
+- Using input/output examples in prompts
+- Getting AI suggestions for data structure optimization
+- **Structure Description Prompts**: Techniques for describing complex data structures
+- **Nested Data Prompting**: Communicating about multi-level data organizations
 
-### Completeness Elements (25%)
-- **Requirement Coverage**: All necessary specifications included
-- **Constraint Definition**: Clear statement of limitations and boundaries
-- **Edge Case Consideration**: Explicit handling of exceptional situations
-- **Success Criteria**: Clear definition of what constitutes acceptable output
+#### Code Reading Skills
+- Reading complex data structure definitions
+- Tracing dictionary and set operations
+- Understanding nested data access patterns
 
-### Technical Accuracy Elements (25%)
-- **Syntactic Correctness**: Properly formatted code examples
-- **Conceptual Alignment**: Proper use of programming paradigms
-- **Library/Framework Knowledge**: Correct references to external tools
-- **Best Practice Awareness**: Alignment with industry standards
+#### Debugging Skills
+- Troubleshooting key errors
+- Inspecting nested data structures
+- Using pretty-print for complex structures
 
-### Strategic Elements (25%)
-- **Prompt Efficiency**: Conciseness without sacrificing clarity
-- **Progressive Disclosure**: Appropriate sequencing of information
-- **Example Quality**: Helpfulness of provided examples
-- **Error Prevention**: Anticipation of potential misunderstandings
+#### Project
+Contact management system with nested data validation
+- **Workshop**: Compare AI responses to different data structure prompts
+- **Integration Activity**: Create a "Prompt Strategy" document outlining planned prompts for implementation
 
-## 4. Templates for Different Types of Coding Assistance
+#### Assessment
+- Dictionary and set operations quiz
+- Contact management system project
+- **Peer Review**: Of prompts used for dictionary operations
 
-### Function Implementation Template
+#### Learning Outcome
+"I can design appropriate data structures, debug complex data issues, and effectively communicate about data organization in prompts"
+
+---
+
+## Phase 3: Logic, Control Flow & Execution Tracing (Weeks 5-6)
+
+### Week 5: Conditionals & Logical Debugging
+#### Python Skills
+- If/else statements, boolean operations
+- Comparison operators
+- Complex conditional expressions
+
+#### AI Assistant Skills
+- Using AI to review logical expressions
+- Getting alternative logical implementations
+- **Algorithm Description Techniques**: Translating logical thinking into clear prompts
+- **Edge Case Specification**: Communicating corner cases and special conditions
+
+#### Code Reading Skills
+- Tracing execution paths in conditional structures
+- Identifying all possible execution branches
+- Understanding complex boolean expressions
+
+#### Debugging Skills
+- Using breakpoints in conditional blocks
+- Debugging boolean logic errors
+- Validating condition boundaries
+
+#### Project
+Decision-making application with edge case handling
+- **Exercise**: Craft prompts that describe different logical patterns
+- **Integration Activity**: Create "prompt pairs" - one for implementation and one for testing edge cases
+
+#### Assessment
+- Boolean logic and conditional exercises
+- Decision-making application project
+- **Prompt Improvement**: Exercise based on instructor feedback
+
+#### Learning Outcome
+"I can implement, trace, and debug complex decision logic and create prompts that precisely communicate logical requirements"
+
+---
+
+### Week 6: Loops & Iteration Debugging
+#### Python Skills
+- For loops, while loops, nested loops
+- Loop control statements (break, continue)
+- Iteration patterns and techniques
+
+#### AI Assistant Skills
+- Explaining algorithm intentions to AI
+- Getting AI to optimize loop efficiency
+- **Iteration Prompting Patterns**: How to describe loops and recursive processes
+- **Efficiency Specification**: Communicating performance requirements
+
+#### Code Reading Skills
+- Mentally simulating loop execution
+- Understanding nested loop interactions
+- Analyzing loop efficiency and termination conditions
+
+#### Debugging Skills
+- Debugging infinite loops
+- Using loop variable watches
+- Stepping through iterations in debugger
+
+#### Project
+Data analysis tool with robust loop implementations
+- **Workshop**: Debug loop issues using carefully crafted prompts
+- **Integration Activity**: Document prompts used for implementing efficient loops
+
+#### Assessment
+- Loop implementation challenges
+- Data analysis tool project
+- **Analysis**: Students rate the effectiveness of their loop-related prompts
+
+#### Learning Outcome
+"I can implement efficient loops, systematically debug iteration issues, and create prompts that communicate algorithmic requirements clearly"
+
+---
+
+## Phase 4: Functions, Modularity & Structured Debugging (Weeks 7-8)
+
+### Week 7: Functions & Component-Level Debugging
+#### Python Skills
+- Function definition, parameters, return values
+- Default arguments, variable-length arguments
+- Scope and namespaces
+
+#### AI Assistant Skills
+- Writing clear function specifications for AI
+- Using AI to suggest function improvements
+- **Component-Level Prompts**: Creating focused prompts for modular functionality
+- **Interface Design Prompting**: Using prompts to define function signatures and behaviors
+
+#### Code Reading Skills
+- Following function call execution flow
+- Understanding parameter passing and return values
+- Reading recursive function implementations
+
+#### Debugging Skills
+- Setting function breakpoints
+- Inspecting parameter values
+- Analyzing call stacks
+- Isolating function-specific bugs
+
+#### Project
+Utility function library with comprehensive testing
+- **Exercise**: Transform function specifications into effective prompts
+- **Integration Activity**: Create a "prompt library" with templates for different function types
+
+#### Assessment
+- Function implementation exercises
+- Utility function library project
+- **Evaluation**: Completeness of function-related prompts
+
+#### Learning Outcome
+"I can design modular functions, debug them in isolation, and write prompts that clearly define component functionality"
+
+---
+
+### Week 8: Files, Errors & External Interaction Debugging
+#### Python Skills
+- File operations (read, write, append)
+- Exception handling (try, except, finally)
+- Working with different file formats
+
+#### AI Assistant Skills
+- Getting AI help with file processing patterns
+- Using AI for error handling suggestions
+- **Error Handling Specification**: Communicating exception requirements
+- **External System Interaction Prompts**: Describing file operations and I/O
+
+#### Code Reading Skills
+- Understanding file operation patterns
+- Analyzing exception handling flow
+- Reading code that interacts with external systems
+
+#### Debugging Skills
+- Debugging file access issues
+- Exception breakpoints
+- Simulating error conditions
+- Post-mortem debugging
+
+#### Project
+Log analyzer with comprehensive error handling
+- **Workshop**: Create prompts for different error scenarios
+- **Integration Activity**: Design prompts specifically for error handling implementations
+
+#### Assessment
+- File handling and exception exercises
+- Log analyzer project
+- **Documentation**: Students provide examples of iteratively improved prompts based on initial results
+
+#### Learning Outcome
+"I can work with external data, systematically debug interaction issues, and create robust prompts for error-handling scenarios"
+
+---
+
+## Phase 5: OOP, Libraries & Advanced Debugging (Weeks 9-10)
+
+### Week 9: Basic Classes & Object-Oriented Debugging
+#### Python Skills
+- Class definition, attributes, methods
+- Instantiation and object usage
+- Inheritance and method overriding
+
+#### AI Assistant Skills
+- Getting AI help with class design
+- Using AI to suggest appropriate methods
+- **System Design Prompts**: Creating prompts for classes and object relationships
+- **Behavioral Description**: Communicating about object interactions
+
+#### Code Reading Skills
+- Reading class definitions and relationships
+- Understanding instance creation and lifecycle
+- Tracing method execution flow
+
+#### Debugging Skills
+- Inspecting object state
+- Debugging constructor issues
+- Tracking attribute changes
+- Using object inspection in debugger
+
+#### Project
+Simple game with class-based architecture
+- **Exercise**: Translate class diagrams into effective prompts
+- **Integration Activity**: Create a "prompt architecture" document showing how prompts will be used for different classes
+
+#### Assessment
+- Object-oriented programming exercises
+- Game project implementation
+- **Evaluation**: Alignment between OOP design and prompts used
+
+#### Learning Outcome
+"I understand OOP basics, can debug object-related issues, and craft prompts that effectively communicate class design and behavior"
+
+---
+
+### Week 10: Libraries, Integration & System-Level Debugging
+#### Python Skills
+- Imports, standard library usage
+- Third-party packages and installation
+- API usage and documentation
+
+#### AI Assistant Skills
+- Using AI to find appropriate libraries
+- Getting AI help with API usage
+- **Integration Prompts**: Describing how components should work together
+- **Library Utilization Prompts**: Crafting prompts that leverage existing libraries
+
+#### Code Reading Skills
+- Reading library documentation and source code
+- Understanding import and dependency patterns
+- Analyzing API usage examples
+
+#### Debugging Skills
+- Debugging import issues
+- Diagnosing library integration problems
+- Using library-specific debugging tools
+- Isolating third-party vs. your code issues
+
+#### Project
+Data visualization application with multiple libraries
+- **Workshop**: Develop prompts for integrating multiple components
+- **Integration Activity**: Include a "prompt strategy" section in the project documentation
+
+#### Assessment
+- Library usage exercises
+- Data visualization application project
+- **Final Deliverable**: Comprehensive prompt portfolio with analysis of effectiveness throughout the course
+
+#### Learning Outcome
+"I can integrate external libraries, debug complex interactions, and develop sophisticated prompts for multi-component systems"
+
+---
+
+## Phase 6: Testing and Production-Ready Code (Weeks 11-12)
+
+### Week 11: Fundamentals of Testing
+#### Python Skills
+- Unit testing fundamentals
+- pytest framework basics
+- Test case design and implementation
+- Testing edge cases and boundary conditions
+
+#### AI Assistant Skills
+- Using AI to suggest test cases
+- Writing prompts for test generation
+- **Test Coverage Prompts**: Creating prompts that identify untested scenarios
+- **Edge Case Generation**: Using AI to identify boundary conditions
+
+#### Code Reading Skills
+- Reading and understanding test code
+- Identifying testable components
+- Recognizing test patterns and best practices
+
+#### Testing Skills
+- Writing basic unit tests
+- Test naming conventions
+- Assertions and verification
+- Running test suites
+
+#### Project
+Test suite for previous project components
+- **Workshop**: Using AI to generate test cases for existing functions
+- **Integration Activity**: Create comprehensive test suite for utility functions from Week 7
+
+#### Assessment
+- Unit test implementation exercises
+- Test coverage analysis
+- **Prompt Quality**: Evaluate effectiveness of test-focused prompts
+
+#### Learning Outcome
+"I can write effective unit tests for Python functions, use AI to identify test cases, and verify code behavior systematically"
+
+---
+
+### Week 12: Advanced Testing and Integration
+#### Python Skills
+- Test-driven development (TDD)
+- Mock objects and dependency injection
+- Integration testing
+- Test coverage and reporting
+
+#### AI Assistant Skills
+- Using AI for TDD workflow
+- Getting mock object suggestions
+- **Test-First Prompting**: Creating prompts that describe behavior before implementation
+- **Integration Test Design**: Describing component interactions for testing
+
+#### Code Reading Skills
+- Understanding test-driven codebases
+- Reading mock implementations
+- Analyzing test coverage reports
+
+#### Testing Skills
+- Implementing TDD workflow
+- Creating and using mock objects
+- Writing integration tests
+- Measuring and improving test coverage
+
+#### Project
+Full-stack application with comprehensive testing
+- **Exercise**: Practice TDD workflow with AI assistance
+- **Integration Activity**: Implement both unit and integration tests for final project
+
+#### Assessment
+- TDD implementation challenge
+- Final project with test suite
+- **Final Deliverable**: Complete prompt portfolio including test-focused prompts
+
+#### Learning Outcome
+"I can use test-driven development, create comprehensive test suites including mocks and integration tests, and use AI effectively throughout the testing process"
+
+---
+
+## Assessment Frameworks
+
+### Prompt Engineering Assessment Framework
+
+Throughout the course, prompt engineering skills will be evaluated using the following rubric:
+
+### Prompt Quality Rubric
+1. **Clarity** (25%)
+   - Specific request definition
+   - Technical accuracy of terminology
+   - Logical organization
+   - Context provision
+
+2. **Completeness** (25%)
+   - All relevant requirements included
+   - Constraints clearly defined
+   - Edge cases considered
+   - Success criteria specified
+
+3. **Effectiveness** (25%)
+   - Prompt yields useful responses
+   - Minimal iterations needed
+   - Appropriate level of detail
+   - Avoids common pitfalls
+
+4. **Iteration & Improvement** (25%)
+   - Evidence of refinement
+   - Learning from previous results
+   - Strategic adjustments
+   - Pattern recognition
+
+### Prompt Engineering Deliverables
+1. **Weekly Documentation**: Prompts used in each project with analysis
+2. **Prompt Portfolio**: Collection of effective prompts developed throughout the course
+3. **Reflection Journal**: Analysis of prompt effectiveness and lessons learned
+4. **Final Project**: Comprehensive implementation with prompt engineering strategy
+
+---
+
+## Prompt Engineering and Testing Templates
+
+### Code Explanation Request Template
 ```
-Task: Implement a function that [specific functionality]
-Input parameters:
-- param1 (type): description
-- param2 (type): description
-Output: (return_type): description
-Constraints:
-- [constraint 1]
-- [constraint 2]
-Example usage:
-[code example]
-Additional context:
-[relevant information]
+I'm looking at this Python code: [CODE]
+I'm not sure about [SPECIFIC ASPECT].
+Can you explain how [SPECIFIC PART] works?
+What I currently understand is [CURRENT UNDERSTANDING].
 ```
 
-### Debugging Template
+### Debugging Assistance Template
 ```
-Task: Debug the following code which is intended to [functionality]
-Current behavior: [description of error or issue]
-Expected behavior: [description of what should happen]
-Code:
-[problematic code]
-Error message (if any):
-[error text]
-Context:
-[relevant information about environment, dependencies, etc.]
+I have a Python program that is supposed to [INTENDED BEHAVIOR]
+But it's currently [ACTUAL BEHAVIOR]
+Here's the code: [CODE]
+Here's the error message (if any): [ERROR]
+I've already tried: [PREVIOUS ATTEMPTS]
 ```
 
-### Code Optimization Template
+### Implementation Request Template
 ```
-Task: Optimize the following code for [specific goal: speed, memory, readability]
-Current implementation:
-[code to optimize]
-Performance metrics (if available):
-[metrics]
-Optimization priorities:
-1. [priority 1]
-2. [priority 2]
-Constraints:
-- [constraint 1]
-- [constraint 2]
+I need to implement a function that [PURPOSE]
+Inputs: [INPUT PARAMETERS AND TYPES]
+Expected output: [OUTPUT DESCRIPTION AND TYPE]
+Requirements:
+- [REQUIREMENT 1]
+- [REQUIREMENT 2]
+Example usage: [EXAMPLE]
+```
+
+### Data Structure Design Template
+```
+I need to design a data structure for [PURPOSE]
+The information I need to store includes:
+- [DATA ELEMENT 1] (type: [TYPE])
+- [DATA ELEMENT 2] (type: [TYPE])
+I'll need to perform these operations:
+- [OPERATION 1]
+- [OPERATION 2]
+Performance considerations: [CONSIDERATIONS]
 ```
 
 ### System Design Template
 ```
-Task: Design a [component/system] for [specific purpose]
+I need to design a [COMPONENT/SYSTEM] for [PURPOSE]
+It needs to include these components:
+- [COMPONENT 1] which does [FUNCTION]
+- [COMPONENT 2] which does [FUNCTION]
+These components should interact by [INTERACTION PATTERN]
+Additional requirements:
+- [REQUIREMENT 1]
+- [REQUIREMENT 2]
+```
+
+### Unit Test Generation Template
+```
+I need to write unit tests for this function:
+[FUNCTION CODE]
+
+The function is supposed to [EXPECTED BEHAVIOR].
+Input parameters:
+- [PARAM 1]: [DESCRIPTION] (valid values: [EXAMPLES])
+- [PARAM 2]: [DESCRIPTION] (valid values: [EXAMPLES])
+
+Expected output for normal cases:
+- [EXAMPLE INPUT] should return [EXPECTED OUTPUT]
+
+Edge cases to consider:
+- [EDGE CASE 1]
+- [EDGE CASE 2]
+
+Please help me create pytest test cases covering both normal functionality and edge cases.
+```
+
+### Test-Driven Development Template
+```
+I need to implement a function with this signature:
+[FUNCTION SIGNATURE]
+
+Purpose: [WHAT THE FUNCTION SHOULD DO]
+
 Requirements:
-- Functional: [list of functions]
-- Non-functional: [performance, security, etc.]
-Existing components:
-[description of related system parts]
-Integration points:
-[how this should connect to other systems]
-Design considerations:
-[specific concerns to address]
+- [REQUIREMENT 1]
+- [REQUIREMENT 2]
+
+Test cases the function should pass:
+1. [INPUT] should return [OUTPUT]
+2. [INPUT] should return [OUTPUT]
+3. If [EDGE CASE], it should [EXPECTED BEHAVIOR]
+
+Please help me first write pytest test cases for these requirements, then implement the function that passes these tests.
 ```
 
-### Code Review Template
+### Mock Object Template
 ```
-Task: Review the following code for [specific aspects]
-Code to review:
-[code]
-Focus areas:
-- [area 1, e.g., security, efficiency]
-- [area 2]
-Standards to apply:
-[relevant standards or best practices]
-Suggested improvements format:
-[how you want feedback structured]
+I'm testing a function that depends on [EXTERNAL DEPENDENCY]. 
+Here's my function:
+[FUNCTION CODE]
+
+I need to create a mock for [DEPENDENCY] that:
+- Simulates [BEHAVIOR 1]
+- Responds to [METHOD CALL] with [RESPONSE]
+- Allows me to verify [SPECIFIC INTERACTION]
+
+Please help me create the appropriate mock objects and tests to verify my function without using the real dependency.
 ```
 
-## 5. Case Studies of Effective vs. Ineffective Prompting
+---
 
-### Basic Case Studies (Weeks 1-4)
-- **Case: The Vague Request vs. Specific Request**
-  - Ineffective: "Fix this code"
-  - Effective: "This code should sort a list of dictionaries by their 'date' value, but it's throwing a TypeError. Here's the exact error message..."
+## Course Materials and Resources
 
-- **Case: Context-Free vs. Context-Rich**
-  - Ineffective: "How do I work with pandas DataFrames?"
-  - Effective: "I'm analyzing weather data in a pandas DataFrame with temperature and humidity columns. I need to filter rows where temperature > 80°F and visualize the humidity distribution for those hot days."
+### Required Materials
+- Python 3.9+ installed on student computers
+- Text editor or IDE (VS Code recommended)
+- Course GitHub repository access
+- AI assistant account (specific platform to be determined)
+- pytest framework and extensions
+- Coverage.py for test coverage analysis
 
-### Intermediate Case Studies (Weeks 5-8)
-- **Case: The Assumed Knowledge Problem**
-  - Ineffective: "Implement the visitor pattern for my classes"
-  - Effective: "I have these class hierarchies [code] and need to implement the visitor pattern. Here's what each class represents in my domain..."
+### Recommended Resources
+- "Python Crash Course" by Eric Matthes (reference text)
+- "Effective Python" by Brett Slatkin (advanced reference)
+- "Python Testing with pytest" by Brian Okken
+- "Test-Driven Development with Python" by Harry Percival (selected chapters)
+- Official Python documentation (python.org)
+- Course-specific prompt engineering and testing handbook (provided digitally)
 
-- **Case: The Constraint Communication Gap**
-  - Ineffective: "Make this code run faster"
-  - Effective: "This function processes large text files and is too slow. It currently takes 5 seconds for a 1MB file. I need it to process at least 10MB/second. Memory usage should stay under 100MB."
+---
 
-### Advanced Case Studies (Weeks 9-16)
-- **Case: The Architecture Description Challenge**
-  - Ineffective: "Design a system for user authentication"
-  - Effective: [Detailed prompt with user flow diagrams, security requirements, integration points, and existing components]
+## Course Policies
 
-- **Case: The Bug-Finding Mission**
-  - Ineffective: "There's a race condition somewhere in this code"
-  - Effective: [Detailed prompt with thread interaction description, observed symptoms, reproduction steps, and system environment details]
+### Assessment Breakdown
+- Weekly Projects: 35%
+- Quizzes and Exercises: 20%
+- Prompt Engineering Portfolio: 15%
+- Testing Implementation: 10%
+- Final Project: 20%
 
-### Real-World Example Analysis
-- **Before/After Examples**: Actual prompts from industry projects with identifying details changed
-- **Outcome Metrics**: Comparing development time, code quality, and revision needs
-- **Expert Commentary**: Notes from experienced AI-assisted developers on prompt strategy
+### Attendance and Participation
+- Students are expected to attend all sessions
+- Active participation in workshops and code reviews is essential
+- Missed sessions should be compensated through additional exercises
 
-## Implementation Strategy
+### Late Submissions
+- Projects submitted within 24 hours after deadline: 10% penalty
+- Projects submitted within 48 hours after deadline: 25% penalty
+- Projects submitted more than 48 hours after deadline: 50% penalty
+- No submissions accepted after 1 week
 
-### Integration into Course Structure
-- Add 15-20 minute prompt engineering segments to each class session
-- Include prompt quality as a graded component of assignments
-- Create a prompt engineering workbook that evolves throughout the course
-- Establish a prompt library that students contribute to and use
+### Academic Integrity
+- All submitted code must be original or properly attributed
+- AI assistance must be documented as specified in course guidelines
+- Plagiarism will result in course failure
 
-### Assessment Methods
-- Weekly prompt quality evaluations using the rubric
-- Peer review of prompts and generated code
-- Prompt improvement assignments based on case studies
-- Final project includes documentation of prompt engineering process
+---
 
-### Learning Resources
-- Prompt engineering cheat sheets for different coding tasks
-- Video demonstrations of effective prompt refinement
-- Collection of before/after examples showing prompt evolution
-- Guest lectures from industry professionals using AI coding assistants
+## Support and Resources
 
-# How the Python Code Ascent Course Prepares Students for Modern Technical Interviews
+### Office Hours
+- Instructor office hours: [SCHEDULE]
+- Teaching assistant availability: [SCHEDULE]
 
-The technical interview landscape is indeed evolving, and you've highlighted a key frustration many developers face with traditional interview formats. The Python Code Ascent course we've discussed is actually extremely well-positioned to prepare students for the more practical, relevant interview approaches you've advocated for.
+### Online Support
+- Course forum for questions and discussions
+- Weekly check-in sessions for individual support
+- Prompt engineering review sessions on request
 
-## How This Course Aligns with Modern Interview Trends
+### Additional Resources
+- Python community meetups (virtual participation encouraged)
+- Recommended online practice platforms
+- AI assistant documentation and tutorials
 
-### 1. Real-World Project Experience
-The course is built around a continuous project that evolves throughout the 16 weeks, giving students substantial code they can bring to an interview and discuss in detail. Each phase builds on previous work, creating a portfolio piece that demonstrates:
-- Design evolution
-- Progressive problem-solving
-- Technical growth
-- Integration of multiple technologies
+---
 
-### 2. Debugging Proficiency
-The curriculum explicitly teaches debugging skills in every single week, progressing from basic techniques to advanced production debugging. This directly prepares students for the "live debugging session" interview format you mentioned, as they'll be comfortable with:
-- Systematic troubleshooting
-- Using debugging tools effectively
-- Explaining their debugging process
-- Fixing issues under observation
-
-### 3. Architecture and Design Skills
-The course's focus on:
-- Modular programming (Week 4)
-- Object-oriented design (Weeks 5-6)
-- Code organization (Week 7)
-- System integration (Weeks 9-12)
-- Production architecture (Weeks 13-16)
-
-All prepare students for architecture discussions in interviews, equipping them to coherently explain design choices and tradeoffs.
-
-### 4. Collaborative Coding Preparation
-The AI assistance and prompt engineering components uniquely prepare students for collaborative coding interviews by teaching them to:
-- Articulate their thought process clearly
-- Break down problems systematically
-- Communicate technical concepts effectively
-- Work interactively with another entity to solve problems
-
-## The AI Advantage in Modern Interviews
-
-The course's focus on AI collaboration and prompt engineering provides additional advantages for modern technical interviews:
-
-1. **Communication Skills**: Learning to write effective prompts trains students to communicate technical requirements precisely - a critical skill in pair programming interviews.
-
-2. **Problem Decomposition**: The prompt engineering exercises teach students to break down complex problems into manageable components - exactly what interviewers look for.
-
-3. **Adaptability**: Working with AI tools teaches flexibility in approach and openness to different solutions - qualities that shine in collaborative interview settings.
-
-4. **Focus on Fundamentals**: Despite using AI, the course ensures students understand core concepts deeply, so they can explain their reasoning in interviews regardless of tool usage.
-
-## Interview-Specific Benefits of Our Enhanced Prompt Engineering Focus
-
-The enhanced prompt engineering components we discussed provide additional interview preparation:
-
-1. The **case studies of effective vs. ineffective prompting** teach clear communication about technical problems - essential in any interview format.
-
-2. The **code evaluation framework** develops critical thinking about code quality, preparing students to discuss and defend technical decisions.
-
-3. The **rubric for prompt quality** builds metacognitive skills that help students articulate their thought process during interviews.
-
-4. The **templates for different coding tasks** create mental frameworks for approaching various programming challenges methodically.
-
-## Conclusion
-
-This course prepares students not for the outdated trivia-based interviews, but for the exact type of modern technical interviews you advocate for - ones that focus on practical skills, real problem-solving, and effective collaboration.
-
-By teaching Python within the context of real-world development practices, integrating AI tools appropriately, and emphasizing communication and critical thinking, graduates will be well-equipped to showcase their capabilities in meaningful interview formats that assess actual job readiness rather than memorization.
-
-
+*This syllabus is subject to change based on class progress and needs. All changes will be communicated in advance.*
